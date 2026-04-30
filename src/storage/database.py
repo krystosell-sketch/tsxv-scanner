@@ -69,6 +69,11 @@ CREATE TABLE IF NOT EXISTS scored_setups (
     volume_ratio_5d         REAL,
     price_range_20d         REAL,
     signal_reasons          TEXT,
+    issuer                  TEXT,
+    insider_name            TEXT,
+    latest_role             TEXT,
+    latest_value_cad        REAL,
+    latest_trade_date       TEXT,
     UNIQUE (run_date, ticker)
 );
 
@@ -115,9 +120,26 @@ def get_connection(db_path: str | Path = _DEFAULT_DB_PATH) -> sqlite3.Connection
 
 
 def initialize_db(db_path: str | Path = _DEFAULT_DB_PATH) -> None:
-    """Create tables and indexes if they don't exist."""
+    """Create tables and indexes if they don't exist. Migrates existing DBs."""
     with get_connection(db_path) as conn:
         conn.executescript(_DDL)
+        # Migration: add new columns to scored_setups if they don't exist yet
+        existing = {
+            row[1]
+            for row in conn.execute("PRAGMA table_info(scored_setups)").fetchall()
+        }
+        migrations = {
+            "issuer":           "ALTER TABLE scored_setups ADD COLUMN issuer TEXT",
+            "insider_name":     "ALTER TABLE scored_setups ADD COLUMN insider_name TEXT",
+            "latest_role":      "ALTER TABLE scored_setups ADD COLUMN latest_role TEXT",
+            "latest_value_cad": "ALTER TABLE scored_setups ADD COLUMN latest_value_cad REAL",
+            "latest_trade_date":"ALTER TABLE scored_setups ADD COLUMN latest_trade_date TEXT",
+        }
+        for col, ddl in migrations.items():
+            if col not in existing:
+                conn.execute(ddl)
+                logger.info("Migration: added column scored_setups.%s", col)
+        conn.commit()
     logger.info("Database initialized: %s", db_path)
 
 
@@ -194,11 +216,12 @@ def upsert_scored_setups(df: pd.DataFrame, run_date: str, db_path: str | Path = 
         "accumulation_flag", "pre_breakout_flag", "cluster_buying_flag",
         "insider_buy_7d", "volume_ratio_5d", "price_range_20d",
         "signal_reasons",
+        "issuer", "insider_name", "latest_role", "latest_value_cad", "latest_trade_date",
     ]
 
     out = df.copy()
     out["run_date"] = run_date
-    # Convert list column to JSON string
+    # Convert list column to pipe-delimited string
     if "signal_reasons" in out.columns:
         out["signal_reasons"] = out["signal_reasons"].apply(
             lambda x: "|".join(x) if isinstance(x, list) else str(x or "")
@@ -206,6 +229,11 @@ def upsert_scored_setups(df: pd.DataFrame, run_date: str, db_path: str | Path = 
     for flag_col in ("accumulation_flag", "pre_breakout_flag", "cluster_buying_flag"):
         if flag_col in out.columns:
             out[flag_col] = out[flag_col].astype(int)
+    # Convert trade date to ISO string (datetime → "YYYY-MM-DD")
+    if "latest_trade_date" in out.columns:
+        out["latest_trade_date"] = pd.to_datetime(
+            out["latest_trade_date"], errors="coerce"
+        ).dt.strftime("%Y-%m-%d").fillna("")
 
     insert_df = _prep(out, cols)
     sql = f"""

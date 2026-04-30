@@ -171,7 +171,7 @@ def format_console_output(detected_df: pd.DataFrame, top_n: int = 10) -> str:
 
     lines: list[str] = [
         sep,
-        "  TSXV/CSE INSIDER ACCUMULATION SCANNER — Phase 2",
+        "  TSXV/CSE INSIDER ACCUMULATION SCANNER",
         f"  Run date: {today}  |  Universe: {universe} tickers",
         sep,
         "",
@@ -191,19 +191,6 @@ def format_console_output(detected_df: pd.DataFrame, top_n: int = 10) -> str:
         )
 
     lines += ["", dash, _format_summary(detected_df, top_n), sep]
-
-    top_grades = top[top["grade"].isin(["A+", "A"])]
-    if not top_grades.empty:
-        lines += ["", "--- Signal Details (Grade A+ and A) ---", ""]
-        for _, row in top_grades.iterrows():
-            reasons = row.get("signal_reasons", [])
-            lines.append(f"{row['ticker']} ({row['grade']}, score {row['composite_score']:.1f}):")
-            if reasons:
-                for r in reasons:
-                    lines.append(f"  * {r}")
-            else:
-                lines.append("  * No specific signals triggered")
-            lines.append("")
 
     return "\n".join(lines)
 

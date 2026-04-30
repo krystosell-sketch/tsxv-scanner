@@ -1,0 +1,46 @@
+name: TSXV/CSE Insider Scanner
+
+on:
+  schedule:
+    - cron: '0 13 * * 1-5'   # 8h00 EST / 9h00 EDT, lundi-vendredi
+  workflow_dispatch:            # lancement manuel depuis GitHub.com
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: ${{ runner.os }}-pip-
+
+      - name: Restaurer la base de donnees
+        uses: actions/cache@v4
+        with:
+          path: data/scanner.db
+          key: scanner-db-${{ github.run_id }}
+          restore-keys: |
+            scanner-db-
+
+      - name: Installer les dependances
+        run: pip install -r requirements.txt
+
+      - name: Lancer le scanner
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          mkdir -p data logs
+          python -m src.main --save --explain --alert
