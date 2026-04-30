@@ -242,6 +242,66 @@ def _format_summary(df: pd.DataFrame, top_n: int) -> str:
 
 
 # ---------------------------------------------------------------------------
+# JSON export (pour dashboard Streamlit Cloud)
+# ---------------------------------------------------------------------------
+
+def export_latest_json(detected_df: pd.DataFrame, path: str = "data/latest.json") -> str:
+    """
+    Exporte les résultats du pipeline dans data/latest.json pour le dashboard public.
+
+    Colonnes exportées : ticker, grade, composite_score, accumulation_flag,
+    pre_breakout_flag, cluster_buying_flag, issuer, insider_name, latest_role,
+    latest_value_cad, latest_trade_date, volume_ratio_5d, signal_reasons.
+
+    Returns:
+        Chemin du fichier écrit.
+    """
+    import json
+    import os
+
+    cols = [
+        "ticker", "grade", "composite_score",
+        "accumulation_flag", "pre_breakout_flag", "cluster_buying_flag",
+        "issuer", "insider_name", "latest_role",
+        "latest_value_cad", "latest_trade_date",
+        "volume_ratio_5d", "price_range_20d", "signal_reasons",
+    ]
+    # Garder seulement les colonnes présentes
+    available = [c for c in cols if c in detected_df.columns]
+    export_df = detected_df[available].copy()
+
+    # Convertir les flags en bool Python natif pour JSON
+    for flag in ("accumulation_flag", "pre_breakout_flag", "cluster_buying_flag"):
+        if flag in export_df.columns:
+            export_df[flag] = export_df[flag].astype(bool)
+
+    # Convertir signal_reasons (liste ou str pipe-délimité) en liste
+    if "signal_reasons" in export_df.columns:
+        export_df["signal_reasons"] = export_df["signal_reasons"].apply(
+            lambda x: x if isinstance(x, list)
+            else [r for r in str(x).split("|") if r.strip()]
+        )
+
+    # Convertir les dates en str ISO
+    if "latest_trade_date" in export_df.columns:
+        export_df["latest_trade_date"] = export_df["latest_trade_date"].apply(
+            lambda x: str(x)[:10] if pd.notna(x) and str(x) not in ("", "nan", "NaT") else ""
+        )
+
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    records = export_df.fillna("").to_dict(orient="records")
+
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(
+            {"scan_date": date.today().isoformat(), "tickers": records},
+            f, ensure_ascii=False, indent=2,
+        )
+
+    logger.info("export_latest_json: %d tickers → %s", len(records), path)
+    return path
+
+
+# ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
@@ -258,7 +318,9 @@ def main() -> None:
     parser.add_argument("--explain", action="store_true",
                         help="Génère des explications Claude (API) pour les setups grade A+ et A")
     parser.add_argument("--alert", action="store_true",
-                        help="Envoie les top 5 setups du jour via webhook Discord")
+                        help="Envoie les top setups du jour via webhook Discord")
+    parser.add_argument("--export-json", action="store_true",
+                        help="Exporte les resultats dans data/latest.json pour le dashboard")
     args = parser.parse_args()
 
     use_live = not args.mock
@@ -280,23 +342,33 @@ def main() -> None:
 
     if args.explain and not detected_df.empty:
         from src.ai.explainer import explain_top_setups
-        logger.info("Génération des explications Claude pour les grades A+/A...")
-        explanations = explain_top_setups(detected_df, grades=("A+", "A"))
+        # Expliquer uniquement les tickers en phase Attente (ACCUM sans PRE-BRK)
+        # L'analyse Claude aide à décider si ça vaut la peine de surveiller AVANT le breakout
+        logger.info("Generation des explications Claude pour les setups en Attente (A+/A)...")
+        explanations = explain_top_setups(
+            detected_df,
+            grades=("A+", "A"),
+            attente_only=True,  # uniquement ACCUM sans PRE-BRK
+        )
         if explanations:
-            print("\n--- Explications AI (Grade A+ et A) ---\n")
+            print("\n--- Explications AI (Attente — Grade A+ et A) ---\n")
             for ticker, explanation in explanations.items():
                 row = detected_df[detected_df["ticker"] == ticker].iloc[0]
                 print(f"{ticker} (Grade {row['grade']}, score {row['composite_score']:.1f}):")
                 print(f"  {explanation}\n")
         else:
-            print("\n[--explain] Aucun setup A+/A à expliquer, ou ANTHROPIC_API_KEY manquant.\n")
+            print("\n[--explain] Aucun setup Attente A+/A, ou ANTHROPIC_API_KEY manquant.\n")
 
     if args.alert and not detected_df.empty:
         from src.alerts.discord import send_daily_alert
-        logger.info("Envoi de l'alerte Discord (top 5)...")
-        success = send_daily_alert(detected_df, explanations=explanations, top_n=5)
+        logger.info("Envoi de l'alerte Discord...")
+        success = send_daily_alert(detected_df, explanations=explanations, top_n=10)
         status = "[OK] Alerte Discord envoyee." if success else "[ERREUR] Echec de l'envoi Discord (verifiez DISCORD_WEBHOOK_URL)."
         print(status)
+
+    if args.export_json and not detected_df.empty:
+        path = export_latest_json(detected_df)
+        print(f"[OK] Resultats exportes → {path}")
 
 
 if __name__ == "__main__":

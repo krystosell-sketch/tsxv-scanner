@@ -9,7 +9,7 @@ Envoie :
 
 import json
 import logging
-from datetime import date
+from datetime import date, datetime
 from typing import Any
 
 import requests
@@ -231,4 +231,84 @@ def send_daily_alert(
         return False
     except requests.exceptions.RequestException as exc:
         logger.error("Erreur requête Discord: %s", exc)
+        return False
+
+
+# ---------------------------------------------------------------------------
+# Alerte breakout temps réel
+# ---------------------------------------------------------------------------
+
+def _tv_link(ticker: str) -> str:
+    """Construit un lien TradingView pour un ticker TSXV/CSE."""
+    clean    = ticker.replace(".CN", "").replace(".V", "")
+    exchange = "CSE" if ticker.endswith(".CN") else "TSXV"
+    return f"https://www.tradingview.com/chart/?symbol={exchange}:{clean}"
+
+
+def send_breakout_alert(row: dict, webhook_url: str = "") -> bool:
+    """
+    Envoie une alerte Discord courte et urgente pour un breakout détecté en temps réel.
+
+    Différent du rapport quotidien : pas d'AI, pas de graphique — juste l'essentiel
+    pour agir rapidement. L'analyse Claude a déjà été faite quand le ticker était en Attente.
+
+    Args:
+        row         : Dict avec les clés du pipeline (ticker, grade, composite_score, etc.)
+        webhook_url : Override URL webhook (utilise DISCORD_WEBHOOK_URL sinon)
+
+    Returns:
+        True si succès, False sinon.
+    """
+    from src.config import DISCORD_WEBHOOK_URL as _cfg_url
+    url = webhook_url or _cfg_url
+
+    if not url:
+        logger.warning("Pas de DISCORD_WEBHOOK_URL — alerte breakout ignorée")
+        return False
+
+    ticker  = str(row.get("ticker", "N/A"))
+    grade   = str(row.get("grade", "?"))
+    score   = float(row.get("composite_score") or 0)
+    issuer  = str(row.get("issuer") or "").strip()
+    tv_url  = _tv_link(ticker)
+
+    issuer_line = f"\n*{issuer}*" if issuer and issuer not in ("nan", "None", "") else ""
+    signals = _signal_reasons(row)
+    vol     = float(row.get("volume_ratio_5d") or 0)
+    insider = _fmt_insider(row)
+
+    embed = {
+        "title": f"🚨 BREAKOUT — {ticker}{issuer_line}",
+        "description": (
+            f"**Grade {grade}** · Score **{score:.1f}**\n\n"
+            f"**Signaux**\n{signals}\n\n"
+            f"Volume **{vol:.1f}×** la moyenne 20j\n"
+            f"Dernier insider : {insider}\n\n"
+            f"[📈 Voir sur TradingView]({tv_url})"
+        ),
+        "color": 0xFF4500,  # orange vif
+        "footer": {
+            "text": (
+                f"Moniteur temps réel · "
+                f"{datetime.utcnow().strftime('%Y-%m-%d %H:%M')} UTC"
+            )
+        },
+    }
+
+    payload = {
+        "username": "TSXV/CSE Breakout Monitor",
+        "embeds": [embed],
+    }
+
+    try:
+        resp = requests.post(url, json=payload, timeout=15)
+        resp.raise_for_status()
+        logger.info("Alerte breakout Discord envoyée pour %s (HTTP %d)", ticker, resp.status_code)
+        return True
+    except requests.exceptions.HTTPError as exc:
+        logger.error("Erreur HTTP breakout Discord: %s — %s",
+                     exc, getattr(exc.response, "text", "")[:300])
+        return False
+    except requests.exceptions.RequestException as exc:
+        logger.error("Erreur requête breakout Discord: %s", exc)
         return False

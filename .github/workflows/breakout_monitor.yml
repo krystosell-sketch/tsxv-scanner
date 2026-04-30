@@ -1,0 +1,45 @@
+name: Moniteur de breakout
+
+on:
+  schedule:
+    - cron: '*/15 14-20 * * 1-5'   # toutes les 15 min, 9h30-16h00 ET (14h30-21h00 UTC)
+  workflow_dispatch:                  # lancement manuel depuis GitHub.com
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: ${{ runner.os }}-pip-
+
+      - name: Restaurer tickers alertes aujourd'hui
+        uses: actions/cache@v4
+        with:
+          path: data/alerted_today.json
+          key: breakout-alerted-${{ github.run_id }}
+          restore-keys: |
+            breakout-alerted-
+
+      - name: Installer les dependances
+        run: pip install -r requirements.txt
+
+      - name: Verifier les breakouts
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          mkdir -p data logs
+          python -m src.breakout_monitor

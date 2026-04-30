@@ -175,6 +175,7 @@ def explain_top_setups(
     detected_df,
     grades: tuple[str, ...] = ("A+", "A"),
     top_n: int = 10,
+    attente_only: bool = True,
 ) -> dict[str, str]:
     """
     Generate explanations for all setups of the given grades (up to top_n).
@@ -205,7 +206,14 @@ def explain_top_setups(
         logger.warning("ANTHROPIC_API_KEY not set — skipping AI explanations")
         return {}
 
-    targets = detected_df[detected_df["grade"].isin(grades)].head(top_n)
+    targets = detected_df[detected_df["grade"].isin(grades)]
+    if attente_only and "accumulation_flag" in targets.columns and "pre_breakout_flag" in targets.columns:
+        # Uniquement les tickers en phase Attente : ACCUM actif mais breakout pas encore déclenché
+        targets = targets[
+            targets["accumulation_flag"].astype(bool) &
+            ~targets["pre_breakout_flag"].astype(bool)
+        ]
+    targets = targets.head(top_n)
     if targets.empty:
         logger.info("No %s grade setups found — nothing to explain", "/".join(grades))
         return {}
