@@ -7,6 +7,7 @@ Launch local : python -m streamlit run dashboard.py
 """
 
 import json
+import os
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -53,6 +54,29 @@ def load_data() -> tuple[pd.DataFrame, str]:
 
 
 # ---------------------------------------------------------------------------
+# Client Anthropic
+# ---------------------------------------------------------------------------
+
+def _get_api_client():
+    """Retourne un client Anthropic ou None si la clé n'est pas configurée."""
+    try:
+        import anthropic as _anthropic
+        # Streamlit Cloud : secrets TOML
+        key = ""
+        try:
+            key = st.secrets.get("ANTHROPIC_API_KEY", "")
+        except Exception:
+            pass
+        # Fallback : variable d'environnement / .env local
+        key = key or os.getenv("ANTHROPIC_API_KEY", "")
+        if key:
+            return _anthropic.Anthropic(api_key=key)
+    except ImportError:
+        pass
+    return None
+
+
+# ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
 
@@ -93,7 +117,7 @@ def _build_display_df(df: pd.DataFrame) -> pd.DataFrame:
         rows.append({
             "Grade":         f"{_GRADE_EMOJI.get(grade, '')} {grade}",
             "Ticker":        _tv_url(ticker),          # URL pour LinkColumn
-            "Ticker_label":  ticker,                   # label affiché
+            "Ticker_label":  ticker,                   # label affiché / clé de sélection
             "Entreprise":    str(r.get("issuer") or ""),
             "Score":         f"{float(r.get('composite_score', 0)):.1f}",
             "Signaux":       _fmt_flags(r),
@@ -103,30 +127,88 @@ def _build_display_df(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def _show_table(df: pd.DataFrame, label: str) -> None:
-    """Affiche un tableau avec tickers cliquables TradingView."""
+# ---------------------------------------------------------------------------
+# Tableau avec checkboxes
+# ---------------------------------------------------------------------------
+
+def _show_table(df: pd.DataFrame, label: str) -> pd.DataFrame:
+    """
+    Affiche le tableau avec une colonne checkbox de sélection.
+    Retourne un sous-DataFrame des lignes cochées (depuis le df source original).
+    """
     if df.empty:
         st.info(f"Aucun ticker en {label} pour le moment.")
-        return
+        return pd.DataFrame()
 
     display = _build_display_df(df)
+    display.insert(0, "✅", False)   # colonne checkbox en premier
 
-    st.dataframe(
+    edited = st.data_editor(
         display,
         use_container_width=True,
         hide_index=True,
         column_config={
+            "✅": st.column_config.CheckboxColumn("", width="small"),
             "Ticker": st.column_config.LinkColumn(
                 label="Ticker",
-                display_text=r"symbol=\w+:(.+)$",   # affiche seulement le symbole
+                display_text=r"symbol=\w+:(.+)$",
             ),
-            "Grade":         st.column_config.TextColumn("Grade", width="small"),
-            "Ticker_label":  None,                   # caché (redondant avec Ticker)
-            "Score":         st.column_config.TextColumn("Score", width="small"),
-            "Vol ratio":     st.column_config.TextColumn("Vol", width="small"),
+            "Grade":        st.column_config.TextColumn("Grade", width="small"),
+            "Ticker_label": None,                      # caché
+            "Score":        st.column_config.TextColumn("Score", width="small"),
+            "Vol ratio":    st.column_config.TextColumn("Vol", width="small"),
         },
-        column_order=["Grade", "Ticker", "Entreprise", "Score", "Signaux", "Dernier achat", "Vol ratio"],
+        column_order=["✅", "Grade", "Ticker", "Entreprise", "Score", "Signaux", "Dernier achat", "Vol ratio"],
+        disabled=["Grade", "Ticker", "Entreprise", "Score", "Signaux", "Dernier achat", "Vol ratio"],
     )
+
+    selected_labels = edited.loc[edited["✅"] == True, "Ticker_label"].tolist()
+    return df[df["ticker"].isin(selected_labels)].copy()
+
+
+# ---------------------------------------------------------------------------
+# Analyse Claude AI à la demande
+# ---------------------------------------------------------------------------
+
+def _show_ai_analysis(selected_df: pd.DataFrame) -> None:
+    """
+    Affiche le bouton d'analyse Claude AI pour les tickers sélectionnés.
+    Les résultats s'affichent en cartes dépliables sous le tableau.
+    """
+    if selected_df.empty:
+        return
+
+    n = len(selected_df)
+    st.markdown(f"*{n} ticker(s) sélectionné(s)*")
+
+    if st.button(f"🤖 Analyser avec Claude AI ({n})", type="primary"):
+        client = _get_api_client()
+        if client is None:
+            st.error(
+                "❌ Clé API Anthropic non configurée.\n\n"
+                "Sur Streamlit Cloud : ⚙️ Settings → Secrets → ajouter `ANTHROPIC_API_KEY`\n\n"
+                "En local : ajouter `ANTHROPIC_API_KEY=sk-ant-...` dans le fichier `.env`"
+            )
+            return
+
+        from src.ai.explainer import generate_explanation
+
+        st.divider()
+        for _, row in selected_df.iterrows():
+            ticker = str(row.get("ticker", ""))
+            grade  = str(row.get("grade", ""))
+            issuer = str(row.get("issuer") or "").strip()
+
+            with st.spinner(f"Analyse de {ticker} en cours..."):
+                explanation = generate_explanation(row.to_dict(), client=client)
+
+            label = f"**{ticker}**"
+            if issuer and issuer not in ("nan", "None"):
+                label += f" — {issuer}"
+            label += f"  {_GRADE_EMOJI.get(grade, '')} Grade {grade}"
+
+            with st.expander(label, expanded=True):
+                st.markdown(explanation)
 
 
 # ---------------------------------------------------------------------------
@@ -137,7 +219,7 @@ def section_attente(df: pd.DataFrame) -> None:
     """Tickers en phase Attente : ACCUM actif, breakout pas encore déclenché."""
     st.header("⏳ Attente")
     st.caption(
-        "Accumulation en cours — l'analyse Claude AI a été faite sur ces tickers. "
+        "Accumulation en cours — cochez les tickers intéressants pour lancer l'analyse Claude AI. "
         "Le breakout n'a pas encore eu lieu. Une alerte Discord sera envoyée dès qu'il se déclenche."
     )
 
@@ -154,7 +236,8 @@ def section_attente(df: pd.DataFrame) -> None:
     col1.metric("Tickers en Attente", len(attente))
     col2.metric("Grade A+/A", int(attente["grade"].isin(["A+", "A"]).sum()) if not attente.empty else 0)
 
-    _show_table(attente, "Attente")
+    selected = _show_table(attente, "Attente")
+    _show_ai_analysis(selected)
 
 
 def section_setup(df: pd.DataFrame) -> None:
@@ -175,7 +258,8 @@ def section_setup(df: pd.DataFrame) -> None:
     col1.metric("Tickers en Setup", len(setup))
     col2.metric("Grade A+/A", int(setup["grade"].isin(["A+", "A"]).sum()) if not setup.empty else 0)
 
-    _show_table(setup, "Setup")
+    selected = _show_table(setup, "Setup")
+    _show_ai_analysis(selected)
 
 
 # ---------------------------------------------------------------------------
