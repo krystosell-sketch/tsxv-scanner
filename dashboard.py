@@ -87,6 +87,13 @@ def _tv_url(ticker: str) -> str:
     return f"https://www.tradingview.com/chart/?symbol={exchange}:{clean}"
 
 
+def _tsx_url(ticker: str) -> str:
+    """Construit l'URL TSXTracker pour un ticker TSXV/CSE."""
+    clean    = ticker.replace(".CN", "").replace(".V", "")
+    exchange = "CSE" if ticker.endswith(".CN") else "TSXV"
+    return f"https://tsxtracker.com/en/{exchange}/{clean}"
+
+
 def _fmt_insider(row: pd.Series) -> str:
     name  = str(row.get("insider_name") or "").strip()
     role  = str(row.get("latest_role") or "").strip()
@@ -116,7 +123,8 @@ def _build_display_df(df: pd.DataFrame) -> pd.DataFrame:
         grade  = str(r.get("grade", ""))
         rows.append({
             "Grade":         f"{_GRADE_EMOJI.get(grade, '')} {grade}",
-            "Ticker":        _tv_url(ticker),          # URL pour LinkColumn
+            "Ticker":        _tv_url(ticker),          # URL TradingView pour LinkColumn
+            "TSXTracker":    _tsx_url(ticker),         # URL TSXTracker pour LinkColumn
             "Ticker_label":  ticker,                   # label affiché / clé de sélection
             "Entreprise":    str(r.get("issuer") or ""),
             "Score":         f"{float(r.get('composite_score', 0)):.1f}",
@@ -150,16 +158,22 @@ def _show_table(df: pd.DataFrame, label: str) -> pd.DataFrame:
         column_config={
             "✅": st.column_config.CheckboxColumn("", width="small"),
             "Ticker": st.column_config.LinkColumn(
-                label="Ticker",
+                label="📈 TV",
                 display_text=r"symbol=\w+:(.+)$",
+                width="small",
+            ),
+            "TSXTracker": st.column_config.LinkColumn(
+                label="🔍 TSX",
+                display_text=r"/(\w+)$",
+                width="small",
             ),
             "Grade":        st.column_config.TextColumn("Grade", width="small"),
             "Ticker_label": None,                      # caché
             "Score":        st.column_config.TextColumn("Score", width="small"),
             "Vol ratio":    st.column_config.TextColumn("Vol", width="small"),
         },
-        column_order=["✅", "Grade", "Ticker", "Entreprise", "Score", "Signaux", "Dernier achat", "Vol ratio"],
-        disabled=["Grade", "Ticker", "Entreprise", "Score", "Signaux", "Dernier achat", "Vol ratio"],
+        column_order=["✅", "Grade", "Ticker", "TSXTracker", "Entreprise", "Score", "Signaux", "Dernier achat", "Vol ratio"],
+        disabled=["Grade", "Ticker", "TSXTracker", "Entreprise", "Score", "Signaux", "Dernier achat", "Vol ratio"],
     )
 
     selected_labels = edited.loc[edited["✅"] == True, "Ticker_label"].tolist()

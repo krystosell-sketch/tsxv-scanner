@@ -139,7 +139,7 @@ def _setup_embed(rank: int, row: dict, explanation: str) -> dict:
             },
             {
                 "name": "Liens",
-                "value": _ticker_links(ticker),
+                "value": f"{_ticker_links(ticker)}\n[📈 TradingView]({_tv_link(ticker)})",
                 "inline": True,
             },
         ],
