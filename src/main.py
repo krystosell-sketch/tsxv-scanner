@@ -362,7 +362,14 @@ def main() -> None:
     if args.alert and not detected_df.empty:
         from src.alerts.discord import send_daily_alert
         logger.info("Envoi de l'alerte Discord...")
-        success = send_daily_alert(detected_df, explanations=explanations, top_n=10)
+        # Filtrer comme le dashboard : seulement les tickers avec au moins un signal actif
+        flagged_df = detected_df[
+            detected_df["accumulation_flag"].astype(bool) |
+            detected_df["pre_breakout_flag"].astype(bool) |
+            detected_df["cluster_buying_flag"].astype(bool)
+        ].copy()
+        alert_df = flagged_df if not flagged_df.empty else detected_df
+        success = send_daily_alert(alert_df, explanations=explanations, top_n=10)
         status = "[OK] Alerte Discord envoyee." if success else "[ERREUR] Echec de l'envoi Discord (verifiez DISCORD_WEBHOOK_URL)."
         print(status)
 
