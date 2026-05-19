@@ -1,5 +1,5 @@
 {
-  "scan_date": "2026-05-16",
+  "scan_date": "2026-05-19",
   "tickers": [
     {
       "ticker": "MAXX.CN",
@@ -18,7 +18,7 @@
       "signal_reasons": [
         "Insider buy $4,043,800 in 7d (10%Holder)",
         "Cluster: 2+ transactions in 14d (multi-insider)",
-        "Buy/mktcap ratio 1.7% (very strong signal)",
+        "Buy/mktcap ratio 1.5% (very strong signal)",
         "Volume 2.1x 20d avg",
         "Volume spike >2x 20d avg",
         "Progressive volume accumulation (3+ days above avg)",
@@ -74,27 +74,51 @@
       ]
     },
     {
-      "ticker": "SMY.V",
+      "ticker": "HSTR.V",
       "grade": "B",
-      "composite_score": 43.5,
+      "composite_score": 46.5,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": true,
-      "issuer": "Search Minerals Inc.",
-      "insider_name": "Macintosh, Jason",
+      "issuer": "Heliostar Metals Ltd.",
+      "insider_name": "Soock, Stephen David Nemeth",
       "latest_role": "CEO",
-      "latest_value_cad": 5670.0,
-      "latest_trade_date": "2026-05-12",
-      "volume_ratio_5d": 2.1818,
-      "price_range_20d": 50.0,
+      "latest_value_cad": 511.2,
+      "latest_trade_date": "2026-05-15",
+      "volume_ratio_5d": 2.1979,
+      "price_range_20d": 30.29,
       "signal_reasons": [
-        "Insider buy $6,615 in 7d (CEO)",
-        "Cluster: 2+ transactions in 14d (multi-insider)",
+        "Insider buy $80,719 in 7d (CEO)",
+        "Cluster: 3+ transactions in 14d (multi-insider)",
         "CEO/CFO buying",
         "Volume 2.2x 20d avg",
         "Volume spike >2x 20d avg",
         "Progressive volume accumulation (3+ days above avg)",
-        "Upward momentum +7.7% in 5 days"
+        "Post-drop setup (>20% decline from 30d high)"
+      ]
+    },
+    {
+      "ticker": "CCMI.V",
+      "grade": "B",
+      "composite_score": 41.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Canadian Critical Minerals Inc.",
+      "insider_name": "Berzins, Ian Martin",
+      "latest_role": "CEO",
+      "latest_value_cad": 6000.0,
+      "latest_trade_date": "2026-05-15",
+      "volume_ratio_5d": 2.0026,
+      "price_range_20d": 28.57,
+      "signal_reasons": [
+        "Insider buy $6,000 in 7d (CEO)",
+        "CEO/CFO buying",
+        "Volume 2.0x 20d avg",
+        "Volume spike >2x 20d avg",
+        "Progressive volume accumulation (3+ days above avg)",
+        "Near 20d breakout level (>90% of range)",
+        "Upward momentum +16.7% in 5 days"
       ]
     },
     {
@@ -119,28 +143,6 @@
         "Progressive volume accumulation (3+ days above avg)",
         "Near 20d breakout level (>90% of range)",
         "Upward momentum +14.3% in 5 days"
-      ]
-    },
-    {
-      "ticker": "BLM.V",
-      "grade": "B",
-      "composite_score": 40.5,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "BluMetric Environmental Inc.",
-      "insider_name": "Hilton, John Daniel",
-      "latest_role": "CEO",
-      "latest_value_cad": 821.7,
-      "latest_trade_date": "2026-05-01",
-      "volume_ratio_5d": 2.2394,
-      "price_range_20d": 16.85,
-      "signal_reasons": [
-        "Cluster: 0+ transactions in 14d (multi-insider)",
-        "CEO/CFO buying",
-        "Volume 2.2x 20d avg",
-        "Volume spike >2x 20d avg",
-        "Progressive volume accumulation (3+ days above avg)"
       ]
     },
     {
@@ -188,6 +190,49 @@
       ]
     },
     {
+      "ticker": "CGNT.V",
+      "grade": "C",
+      "composite_score": 38.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Copper Giant Resources Corp.",
+      "insider_name": "Giustra, Frank",
+      "latest_role": "10%Holder",
+      "latest_value_cad": 132000.0,
+      "latest_trade_date": "2026-05-15",
+      "volume_ratio_5d": 2.0441,
+      "price_range_20d": 39.84,
+      "signal_reasons": [
+        "Insider buy $757,000 in 7d (10%Holder)",
+        "Volume 2.0x 20d avg",
+        "Volume spike >2x 20d avg",
+        "Progressive volume accumulation (3+ days above avg)"
+      ]
+    },
+    {
+      "ticker": "DRY.V",
+      "grade": "C",
+      "composite_score": 37.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Dryden Gold Corp. - formerly 1317223 B.C. Ltd.",
+      "insider_name": "Alamos Gold Inc.",
+      "latest_role": "10%Holder",
+      "latest_value_cad": 795300.0,
+      "latest_trade_date": "2026-05-14",
+      "volume_ratio_5d": 1.8248,
+      "price_range_20d": 19.58,
+      "signal_reasons": [
+        "Insider buy $795,300 in 7d (10%Holder)",
+        "Buy/mktcap ratio 1.0% (very strong signal)",
+        "Volume 1.8x 20d avg",
+        "Progressive volume accumulation (3+ days above avg)",
+        "Upward momentum +8.3% in 5 days"
+      ]
+    },
+    {
       "ticker": "GRB.V",
       "grade": "C",
       "composite_score": 36.0,
@@ -199,7 +244,7 @@
       "latest_role": "CEO",
       "latest_value_cad": 550.0,
       "latest_trade_date": "2026-05-12",
-      "volume_ratio_5d": 3.38,
+      "volume_ratio_5d": 3.3799,
       "price_range_20d": 37.27,
       "signal_reasons": [
         "Insider buy $1,685 in 7d (CEO)",
@@ -223,7 +268,7 @@
       "latest_value_cad": 6500.0,
       "latest_trade_date": "2026-05-14",
       "volume_ratio_5d": 3.636,
-      "price_range_20d": 81.48,
+      "price_range_20d": 78.57,
       "signal_reasons": [
         "Insider buy $14,414 in 7d (10%Holder)",
         "Cluster: 4+ transactions in 14d (multi-insider)",
@@ -256,27 +301,6 @@
       ]
     },
     {
-      "ticker": "CGNT.V",
-      "grade": "C",
-      "composite_score": 32.5,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Copper Giant Resources Corp.",
-      "insider_name": "Giustra, Frank",
-      "latest_role": "10%Holder",
-      "latest_value_cad": 163300.0,
-      "latest_trade_date": "2026-05-13",
-      "volume_ratio_5d": 2.0441,
-      "price_range_20d": 39.84,
-      "signal_reasons": [
-        "Insider buy $163,300 in 7d (10%Holder)",
-        "Volume 2.0x 20d avg",
-        "Volume spike >2x 20d avg",
-        "Progressive volume accumulation (3+ days above avg)"
-      ]
-    },
-    {
       "ticker": "BEX.V",
       "grade": "C",
       "composite_score": 32.0,
@@ -296,6 +320,28 @@
         "Progressive volume accumulation (3+ days above avg)",
         "Price in tight base (13.3% range)",
         "Near 20d breakout level (>90% of range)"
+      ]
+    },
+    {
+      "ticker": "IDK.CN",
+      "grade": "C",
+      "composite_score": 31.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": true,
+      "issuer": "ThreeD Capital Inc.",
+      "insider_name": "1313366 Ontario Inc.",
+      "latest_role": "10%Holder",
+      "latest_value_cad": 5875.0,
+      "latest_trade_date": "2026-05-14",
+      "volume_ratio_5d": 1.9298,
+      "price_range_20d": 26.09,
+      "signal_reasons": [
+        "Insider buy $66,254 in 7d (10%Holder)",
+        "Cluster: 7+ transactions in 14d (multi-insider)",
+        "Volume 1.9x 20d avg",
+        "Progressive volume accumulation (3+ days above avg)",
+        "Upward momentum +15.0% in 5 days"
       ]
     },
     {
@@ -344,24 +390,24 @@
       ]
     },
     {
-      "ticker": "HSTR.V",
+      "ticker": "SMY.V",
       "grade": "C",
-      "composite_score": 30.5,
+      "composite_score": 30.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Heliostar Metals Ltd.",
-      "insider_name": "Soock, Stephen David Nemeth",
+      "cluster_buying_flag": true,
+      "issuer": "Search Minerals Inc.",
+      "insider_name": "Macintosh, Jason",
       "latest_role": "CEO",
-      "latest_value_cad": 1008.0000000000001,
-      "latest_trade_date": "2026-05-14",
-      "volume_ratio_5d": 2.1979,
-      "price_range_20d": 30.29,
+      "latest_value_cad": 5670.0,
+      "latest_trade_date": "2026-05-12",
+      "volume_ratio_5d": 1.456,
+      "price_range_20d": 39.29,
       "signal_reasons": [
-        "Insider buy $1,008 in 7d (CEO)",
+        "Insider buy $6,615 in 7d (CEO)",
+        "Cluster: 2+ transactions in 14d (multi-insider)",
         "CEO/CFO buying",
-        "Volume 2.2x 20d avg",
-        "Volume spike >2x 20d avg",
+        "Volume 1.5x 20d avg",
         "Progressive volume accumulation (3+ days above avg)"
       ]
     },
@@ -425,7 +471,7 @@
       "volume_ratio_5d": 1.9888,
       "price_range_20d": 25.0,
       "signal_reasons": [
-        "Insider buy $23,405 in 7d (CEO)",
+        "Insider buy $46,810 in 7d (CEO)",
         "CEO/CFO buying",
         "Volume 2.0x 20d avg",
         "Progressive volume accumulation (3+ days above avg)",
@@ -433,25 +479,23 @@
       ]
     },
     {
-      "ticker": "TRCG.V",
+      "ticker": "ACM.CN",
       "grade": "C",
       "composite_score": 28.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": true,
-      "issuer": "Thistle Resources Inc. (formerly, St. Davids Capital Inc.)",
-      "insider_name": "Cruickshank, Patrick John",
+      "issuer": "Allied Critical Metals Inc",
+      "insider_name": "Bonnell, Roy",
       "latest_role": "CEO",
-      "latest_value_cad": 235.0,
-      "latest_trade_date": "2026-05-12",
-      "volume_ratio_5d": 1.3884,
-      "price_range_20d": 34.78,
+      "latest_value_cad": 52049.99999999999,
+      "latest_trade_date": "2026-05-14",
+      "volume_ratio_5d": 0.6777,
+      "price_range_20d": 32.5,
       "signal_reasons": [
-        "Insider buy $4,822 in 7d (CEO)",
-        "Cluster: 8+ transactions in 14d (multi-insider)",
-        "CEO/CFO buying",
-        "Volume 1.4x 20d avg",
-        "Progressive volume accumulation (3+ days above avg)"
+        "Insider buy $103,140 in 7d (CEO)",
+        "Cluster: 2+ transactions in 14d (multi-insider)",
+        "CEO/CFO buying"
       ]
     },
     {
@@ -475,6 +519,28 @@
       ]
     },
     {
+      "ticker": "TRCG.V",
+      "grade": "C",
+      "composite_score": 28.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": true,
+      "issuer": "Thistle Resources Inc. (formerly, St. Davids Capital Inc.)",
+      "insider_name": "Racioppo, Rocco",
+      "latest_role": "Director",
+      "latest_value_cad": 240.0,
+      "latest_trade_date": "2026-05-14",
+      "volume_ratio_5d": 1.3884,
+      "price_range_20d": 34.78,
+      "signal_reasons": [
+        "Insider buy $5,062 in 7d (Director)",
+        "Cluster: 9+ transactions in 14d (multi-insider)",
+        "CEO/CFO buying",
+        "Volume 1.4x 20d avg",
+        "Progressive volume accumulation (3+ days above avg)"
+      ]
+    },
+    {
       "ticker": "GQC.V",
       "grade": "C",
       "composite_score": 27.5,
@@ -487,7 +553,7 @@
       "latest_value_cad": 23500.0,
       "latest_trade_date": "2026-05-11",
       "volume_ratio_5d": 1.0089,
-      "price_range_20d": 432.97,
+      "price_range_20d": 428.26,
       "signal_reasons": [
         "Insider buy $127,600 in 7d (Director)",
         "Cluster: 3+ transactions in 14d (multi-insider)",
@@ -517,28 +583,6 @@
       ]
     },
     {
-      "ticker": "DIGI.CN",
-      "grade": "C",
-      "composite_score": 26.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Digital Commodities Inc.",
-      "insider_name": "Sutton, Brayden Robert",
-      "latest_role": "Director",
-      "latest_value_cad": 15000.0,
-      "latest_trade_date": "2026-05-14",
-      "volume_ratio_5d": 2.5345,
-      "price_range_20d": 50.0,
-      "signal_reasons": [
-        "Insider buy $15,000 in 7d (Director)",
-        "Volume 2.5x 20d avg",
-        "Volume spike >2x 20d avg",
-        "Near 20d breakout level (>90% of range)",
-        "Upward momentum +20.0% in 5 days"
-      ]
-    },
-    {
       "ticker": "NILI.V",
       "grade": "C",
       "composite_score": 26.0,
@@ -550,11 +594,76 @@
       "latest_role": "Director",
       "latest_value_cad": 172500.0,
       "latest_trade_date": "2026-05-14",
-      "volume_ratio_5d": 1.0316,
+      "volume_ratio_5d": 1.0317,
       "price_range_20d": 26.15,
       "signal_reasons": [
         "Insider buy $512,500 in 7d (Director)",
         "Cluster: 2+ transactions in 14d (multi-insider)"
+      ]
+    },
+    {
+      "ticker": "USHA.V",
+      "grade": "C",
+      "composite_score": 26.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Usha Resources Ltd.",
+      "insider_name": "Varshney, Deepak",
+      "latest_role": "CEO",
+      "latest_value_cad": 37170.0,
+      "latest_trade_date": "2026-05-14",
+      "volume_ratio_5d": 2.8368,
+      "price_range_20d": 33.33,
+      "signal_reasons": [
+        "Insider buy $37,170 in 7d (CEO)",
+        "CEO/CFO buying",
+        "Volume 2.8x 20d avg",
+        "Volume spike >2x 20d avg",
+        "Upward momentum +9.1% in 5 days"
+      ]
+    },
+    {
+      "ticker": "DIGI.CN",
+      "grade": "C",
+      "composite_score": 26.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Digital Commodities Inc.",
+      "insider_name": "Sutton, Brayden Robert",
+      "latest_role": "Director",
+      "latest_value_cad": 15000.0,
+      "latest_trade_date": "2026-05-14",
+      "volume_ratio_5d": 2.5265,
+      "price_range_20d": 50.0,
+      "signal_reasons": [
+        "Insider buy $15,000 in 7d (Director)",
+        "Volume 2.5x 20d avg",
+        "Volume spike >2x 20d avg",
+        "Near 20d breakout level (>90% of range)",
+        "Upward momentum +20.0% in 5 days"
+      ]
+    },
+    {
+      "ticker": "STK.CN",
+      "grade": "C",
+      "composite_score": 25.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Silverstock Metals Inc.",
+      "insider_name": "Fruchter, Jonathan David",
+      "latest_role": "CEO",
+      "latest_value_cad": 2400.0,
+      "latest_trade_date": "2026-05-15",
+      "volume_ratio_5d": 3.0612,
+      "price_range_20d": 18.75,
+      "signal_reasons": [
+        "Insider buy $2,400 in 7d (CEO)",
+        "CEO/CFO buying",
+        "Volume 3.1x 20d avg",
+        "Volume spike >2x 20d avg"
       ]
     },
     {
@@ -574,8 +683,7 @@
       "signal_reasons": [
         "Insider buy $125,704 in 7d (Director)",
         "Cluster: 9+ transactions in 14d (multi-insider)",
-        "Volume 1.6x 20d avg",
-        "Post-drop setup (>20% decline from 30d high)"
+        "Volume 1.6x 20d avg"
       ]
     },
     {
@@ -595,27 +703,6 @@
       "signal_reasons": [
         "Insider buy $4,800 in 7d (Director)",
         "Volume 3.3x 20d avg",
-        "Volume spike >2x 20d avg",
-        "Progressive volume accumulation (3+ days above avg)"
-      ]
-    },
-    {
-      "ticker": "GDP.V",
-      "grade": "C",
-      "composite_score": 24.5,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Golden Pursuit Resources Ltd.",
-      "insider_name": "McClay, Kathleen",
-      "latest_role": "10%Holder",
-      "latest_value_cad": 3795.0,
-      "latest_trade_date": "2026-05-11",
-      "volume_ratio_5d": 2.1249,
-      "price_range_20d": 40.62,
-      "signal_reasons": [
-        "Insider buy $15,305 in 7d (10%Holder)",
-        "Volume 2.1x 20d avg",
         "Volume spike >2x 20d avg",
         "Progressive volume accumulation (3+ days above avg)"
       ]
@@ -662,27 +749,6 @@
       ]
     },
     {
-      "ticker": "AZT.V",
-      "grade": "C",
-      "composite_score": 23.5,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Aztec Minerals Corp.",
-      "insider_name": "Dyakowski, Simon Christopher",
-      "latest_role": "CEO",
-      "latest_value_cad": 1100.0,
-      "latest_trade_date": "2026-05-05",
-      "volume_ratio_5d": 1.7563,
-      "price_range_20d": 36.0,
-      "signal_reasons": [
-        "CEO/CFO buying",
-        "Volume 1.8x 20d avg",
-        "Progressive volume accumulation (3+ days above avg)",
-        "Upward momentum +8.7% in 5 days"
-      ]
-    },
-    {
       "ticker": "SGO.V",
       "grade": "C",
       "composite_score": 23.5,
@@ -716,10 +782,51 @@
       "latest_value_cad": 493000.0,
       "latest_trade_date": "2026-05-07",
       "volume_ratio_5d": 1.2093,
-      "price_range_20d": 42.11,
+      "price_range_20d": 41.67,
       "signal_reasons": [
         "Cluster: 0+ transactions in 14d (multi-insider)",
         "Buy/mktcap ratio 1.6% (very strong signal)",
+        "Progressive volume accumulation (3+ days above avg)"
+      ]
+    },
+    {
+      "ticker": "AZT.V",
+      "grade": "C",
+      "composite_score": 23.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Aztec Minerals Corp.",
+      "insider_name": "Dyakowski, Simon Christopher",
+      "latest_role": "CEO",
+      "latest_value_cad": 1100.0,
+      "latest_trade_date": "2026-05-05",
+      "volume_ratio_5d": 1.7563,
+      "price_range_20d": 36.0,
+      "signal_reasons": [
+        "CEO/CFO buying",
+        "Volume 1.8x 20d avg",
+        "Progressive volume accumulation (3+ days above avg)",
+        "Upward momentum +8.7% in 5 days"
+      ]
+    },
+    {
+      "ticker": "OMGA.CN",
+      "grade": "C",
+      "composite_score": 22.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Omega Pacific Resources Inc.",
+      "insider_name": "Williamson, John",
+      "latest_role": "Director",
+      "latest_value_cad": 3300.0,
+      "latest_trade_date": "2026-05-07",
+      "volume_ratio_5d": 2.2876,
+      "price_range_20d": 51.43,
+      "signal_reasons": [
+        "Volume 2.3x 20d avg",
+        "Volume spike >2x 20d avg",
         "Progressive volume accumulation (3+ days above avg)"
       ]
     },
@@ -744,44 +851,24 @@
       ]
     },
     {
-      "ticker": "OMGA.CN",
-      "grade": "C",
-      "composite_score": 22.5,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Omega Pacific Resources Inc.",
-      "insider_name": "Williamson, John",
-      "latest_role": "Director",
-      "latest_value_cad": 3300.0,
-      "latest_trade_date": "2026-05-07",
-      "volume_ratio_5d": 2.2876,
-      "price_range_20d": 51.43,
-      "signal_reasons": [
-        "Volume 2.3x 20d avg",
-        "Volume spike >2x 20d avg",
-        "Progressive volume accumulation (3+ days above avg)"
-      ]
-    },
-    {
-      "ticker": "HITI.V",
+      "ticker": "BUX.CN",
       "grade": "C",
       "composite_score": 22.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": true,
-      "issuer": "High Tide Inc.",
-      "insider_name": "Sharma, Sandy",
+      "issuer": "Biomark Diagnostics Inc.",
+      "insider_name": "HUANG, GUOYU",
       "latest_role": "CEO",
-      "latest_value_cad": 1020.0,
-      "latest_trade_date": "2026-05-08",
-      "volume_ratio_5d": 0.9261,
-      "price_range_20d": 14.41,
+      "latest_value_cad": 285.0,
+      "latest_trade_date": "2026-05-13",
+      "volume_ratio_5d": 0.37,
+      "price_range_20d": 10.34,
       "signal_reasons": [
-        "Insider buy $42,026 in 7d (CEO)",
-        "Cluster: 3+ transactions in 14d (multi-insider)",
+        "Insider buy $3,145 in 7d (CEO)",
+        "Cluster: 5+ transactions in 14d (multi-insider)",
         "CEO/CFO buying",
-        "Price in tight base (14.4% range)"
+        "Price in tight base (10.3% range)"
       ]
     },
     {
@@ -804,24 +891,24 @@
       ]
     },
     {
-      "ticker": "BUX.CN",
+      "ticker": "HITI.V",
       "grade": "C",
       "composite_score": 22.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": true,
-      "issuer": "Biomark Diagnostics Inc.",
-      "insider_name": "HUANG, GUOYU",
+      "issuer": "High Tide Inc.",
+      "insider_name": "Sharma, Sandy",
       "latest_role": "CEO",
-      "latest_value_cad": 285.0,
-      "latest_trade_date": "2026-05-13",
-      "volume_ratio_5d": 0.37,
-      "price_range_20d": 10.34,
+      "latest_value_cad": 1020.0,
+      "latest_trade_date": "2026-05-08",
+      "volume_ratio_5d": 0.926,
+      "price_range_20d": 14.41,
       "signal_reasons": [
-        "Insider buy $3,145 in 7d (CEO)",
-        "Cluster: 5+ transactions in 14d (multi-insider)",
+        "Insider buy $42,026 in 7d (CEO)",
+        "Cluster: 3+ transactions in 14d (multi-insider)",
         "CEO/CFO buying",
-        "Price in tight base (10.3% range)"
+        "Price in tight base (14.4% range)"
       ]
     },
     {
@@ -845,6 +932,27 @@
       ]
     },
     {
+      "ticker": "TNR.V",
+      "grade": "C",
+      "composite_score": 21.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "TNR Gold Corp.",
+      "insider_name": "Evensen, Jon Christian",
+      "latest_role": "10%Holder",
+      "latest_value_cad": 63589.212,
+      "latest_trade_date": "2026-05-15",
+      "volume_ratio_5d": 1.6957,
+      "price_range_20d": 23.4,
+      "signal_reasons": [
+        "Insider buy $63,589 in 7d (10%Holder)",
+        "Volume 1.7x 20d avg",
+        "Progressive volume accumulation (3+ days above avg)",
+        "Upward momentum +6.8% in 5 days"
+      ]
+    },
+    {
       "ticker": "XIM.V",
       "grade": "C",
       "composite_score": 21.0,
@@ -856,7 +964,7 @@
       "latest_role": "Director",
       "latest_value_cad": 3240.0,
       "latest_trade_date": "2026-05-13",
-      "volume_ratio_5d": 1.3727,
+      "volume_ratio_5d": 1.3725,
       "price_range_20d": 26.32,
       "signal_reasons": [
         "Insider buy $4,570 in 7d (Director)",
@@ -885,6 +993,27 @@
         "Cluster: 1+ transactions in 14d (multi-insider)",
         "CEO/CFO buying",
         "Volume 1.4x 20d avg"
+      ]
+    },
+    {
+      "ticker": "GGAU.V",
+      "grade": "C",
+      "composite_score": 20.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": true,
+      "issuer": "Galactic Gold Corp.",
+      "insider_name": "Guarducci, Manley Richard",
+      "latest_role": "Director",
+      "latest_value_cad": 15000.0,
+      "latest_trade_date": "2026-05-14",
+      "volume_ratio_5d": 1.1937,
+      "price_range_20d": 30.56,
+      "signal_reasons": [
+        "Insider buy $30,000 in 7d (Director)",
+        "Cluster: 2+ transactions in 14d (multi-insider)",
+        "Progressive volume accumulation (3+ days above avg)",
+        "Upward momentum +9.1% in 5 days"
       ]
     },
     {
@@ -950,6 +1079,26 @@
       ]
     },
     {
+      "ticker": "NEV.V",
+      "grade": "C",
+      "composite_score": 19.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Nevada Sunrise Metals Corporation",
+      "insider_name": "Stanyer, Warren William",
+      "latest_role": "CEO",
+      "latest_value_cad": 600.0,
+      "latest_trade_date": "2026-05-04",
+      "volume_ratio_5d": 0.2564,
+      "price_range_20d": 50.0,
+      "signal_reasons": [
+        "CEO/CFO buying",
+        "Near 20d breakout level (>90% of range)",
+        "Upward momentum +33.3% in 5 days"
+      ]
+    },
+    {
       "ticker": "WSR.CN",
       "grade": "C",
       "composite_score": 19.0,
@@ -991,22 +1140,62 @@
       ]
     },
     {
-      "ticker": "PUMA.V",
+      "ticker": "TWO.V",
       "grade": "C",
       "composite_score": 18.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Puma Exploration Inc.",
-      "insider_name": "Gosselin, Réjean",
-      "latest_role": "Director",
-      "latest_value_cad": 4200.0,
-      "latest_trade_date": "2026-05-07",
-      "volume_ratio_5d": 0.519,
-      "price_range_20d": 25.0,
+      "issuer": "T2 Metals Corp.",
+      "insider_name": "Saxon, Mark Stephen",
+      "latest_role": "CEO",
+      "latest_value_cad": 460.0,
+      "latest_trade_date": "2026-05-14",
+      "volume_ratio_5d": 0.5572,
+      "price_range_20d": 27.91,
       "signal_reasons": [
-        "Cluster: 0+ transactions in 14d (multi-insider)",
+        "Insider buy $460 in 7d (CEO)",
+        "Cluster: 1+ transactions in 14d (multi-insider)",
         "CEO/CFO buying"
+      ]
+    },
+    {
+      "ticker": "CCDS.V",
+      "grade": "C",
+      "composite_score": 18.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": true,
+      "issuer": "Carrier Connect Data Solutions Inc.",
+      "insider_name": "Arnet, Johan",
+      "latest_role": "CEO",
+      "latest_value_cad": 5850.0,
+      "latest_trade_date": "2026-05-15",
+      "volume_ratio_5d": 0.8055,
+      "price_range_20d": 31.62,
+      "signal_reasons": [
+        "Insider buy $22,012 in 7d (CEO)",
+        "Cluster: 5+ transactions in 14d (multi-insider)",
+        "CEO/CFO buying"
+      ]
+    },
+    {
+      "ticker": "RML.V",
+      "grade": "C",
+      "composite_score": 18.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Rusoro Mining Ltd.",
+      "insider_name": "Agapov, Andre Vladimir",
+      "latest_role": "CEO",
+      "latest_value_cad": 105000.0,
+      "latest_trade_date": "2026-05-05",
+      "volume_ratio_5d": 1.2402,
+      "price_range_20d": 19.83,
+      "signal_reasons": [
+        "CEO/CFO buying",
+        "Near 20d breakout level (>90% of range)"
       ]
     },
     {
@@ -1031,61 +1220,21 @@
       ]
     },
     {
-      "ticker": "TWO.V",
+      "ticker": "PUMA.V",
       "grade": "C",
       "composite_score": 18.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "T2 Metals Corp.",
-      "insider_name": "Saxon, Mark Stephen",
-      "latest_role": "CEO",
-      "latest_value_cad": 460.0,
-      "latest_trade_date": "2026-05-14",
-      "volume_ratio_5d": 0.5575,
-      "price_range_20d": 27.91,
+      "issuer": "Puma Exploration Inc.",
+      "insider_name": "Gosselin, Réjean",
+      "latest_role": "Director",
+      "latest_value_cad": 4200.0,
+      "latest_trade_date": "2026-05-07",
+      "volume_ratio_5d": 0.519,
+      "price_range_20d": 25.0,
       "signal_reasons": [
-        "Insider buy $460 in 7d (CEO)",
-        "Cluster: 1+ transactions in 14d (multi-insider)",
-        "CEO/CFO buying"
-      ]
-    },
-    {
-      "ticker": "RML.V",
-      "grade": "C",
-      "composite_score": 18.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Rusoro Mining Ltd.",
-      "insider_name": "Agapov, Andre Vladimir",
-      "latest_role": "CEO",
-      "latest_value_cad": 105000.0,
-      "latest_trade_date": "2026-05-05",
-      "volume_ratio_5d": 1.2402,
-      "price_range_20d": 19.83,
-      "signal_reasons": [
-        "CEO/CFO buying",
-        "Near 20d breakout level (>90% of range)"
-      ]
-    },
-    {
-      "ticker": "CCDS.V",
-      "grade": "C",
-      "composite_score": 18.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": true,
-      "issuer": "Carrier Connect Data Solutions Inc.",
-      "insider_name": "Arnet, Johan",
-      "latest_role": "CEO",
-      "latest_value_cad": 5850.0,
-      "latest_trade_date": "2026-05-15",
-      "volume_ratio_5d": 0.8055,
-      "price_range_20d": 31.62,
-      "signal_reasons": [
-        "Insider buy $12,870 in 7d (CEO)",
-        "Cluster: 3+ transactions in 14d (multi-insider)",
+        "Cluster: 0+ transactions in 14d (multi-insider)",
         "CEO/CFO buying"
       ]
     },
@@ -1105,6 +1254,26 @@
       "price_range_20d": 27.27,
       "signal_reasons": [
         "Cluster: 0+ transactions in 14d (multi-insider)",
+        "Progressive volume accumulation (3+ days above avg)"
+      ]
+    },
+    {
+      "ticker": "VCT.V",
+      "grade": "C",
+      "composite_score": 17.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": true,
+      "issuer": "Volt Carbon Technologies Inc.(Formerly Saint Jean Carbon Inc.)",
+      "insider_name": "Lee, V-Bond",
+      "latest_role": "Director",
+      "latest_value_cad": 2200.0,
+      "latest_trade_date": "2026-05-15",
+      "volume_ratio_5d": 1.1885,
+      "price_range_20d": 80.0,
+      "signal_reasons": [
+        "Insider buy $2,600 in 7d (Director)",
+        "Cluster: 2+ transactions in 14d (multi-insider)",
         "Progressive volume accumulation (3+ days above avg)"
       ]
     },
@@ -1129,65 +1298,6 @@
       ]
     },
     {
-      "ticker": "SSA.V",
-      "grade": "C",
-      "composite_score": 17.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Spectra Products Inc.",
-      "insider_name": "Andreola, Gianpaolo Fabrisio",
-      "latest_role": "Director",
-      "latest_value_cad": 48480.0,
-      "latest_trade_date": "2026-05-01",
-      "volume_ratio_5d": 0.1454,
-      "price_range_20d": 25.58,
-      "signal_reasons": [
-        "Buy/mktcap ratio 1.7% (very strong signal)",
-        "Near 20d breakout level (>90% of range)",
-        "Upward momentum +13.2% in 5 days"
-      ]
-    },
-    {
-      "ticker": "HODL.CN",
-      "grade": "C",
-      "composite_score": 16.5,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Sol Strategies Inc.",
-      "insider_name": "Guoga, Antanas (Tony)",
-      "latest_role": "10%Holder",
-      "latest_value_cad": 22386.3458,
-      "latest_trade_date": "2026-05-12",
-      "volume_ratio_5d": 1.1319,
-      "price_range_20d": 61.77,
-      "signal_reasons": [
-        "Insider buy $91,512 in 7d (10%Holder)",
-        "Progressive volume accumulation (3+ days above avg)",
-        "Upward momentum +5.0% in 5 days"
-      ]
-    },
-    {
-      "ticker": "GSR.V",
-      "grade": "C",
-      "composite_score": 16.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Gold Strike Resources Corp.",
-      "insider_name": "Florin Resources Inc.",
-      "latest_role": "10%Holder",
-      "latest_value_cad": 18499999.650000002,
-      "latest_trade_date": "2026-05-01",
-      "volume_ratio_5d": 0.5656,
-      "price_range_20d": 30.51,
-      "signal_reasons": [
-        "Cluster: 0+ transactions in 14d (multi-insider)",
-        "Buy/mktcap ratio 114.2% (very strong signal)"
-      ]
-    },
-    {
       "ticker": "KASH.CN",
       "grade": "C",
       "composite_score": 16.0,
@@ -1205,6 +1315,25 @@
         "Insider buy $269 in 7d (CEO)",
         "CEO/CFO buying",
         "Near 20d breakout level (>90% of range)"
+      ]
+    },
+    {
+      "ticker": "GSR.V",
+      "grade": "C",
+      "composite_score": 16.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Gold Strike Resources Corp.",
+      "insider_name": "Florin Resources Inc.",
+      "latest_role": "10%Holder",
+      "latest_value_cad": 18499999.650000002,
+      "latest_trade_date": "2026-05-01",
+      "volume_ratio_5d": 0.5655,
+      "price_range_20d": 30.51,
+      "signal_reasons": [
+        "Cluster: 0+ transactions in 14d (multi-insider)",
+        "Buy/mktcap ratio 70.8% (very strong signal)"
       ]
     },
     {
@@ -1247,25 +1376,6 @@
       ]
     },
     {
-      "ticker": "BCF.V",
-      "grade": "C",
-      "composite_score": 15.5,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Builders Capital Mortgage Corp.",
-      "insider_name": "Loutitt, Sandy Luke",
-      "latest_role": "Director",
-      "latest_value_cad": 9399.390000000001,
-      "latest_trade_date": "2026-04-28",
-      "volume_ratio_5d": 1.0968,
-      "price_range_20d": 5.6,
-      "signal_reasons": [
-        "Progressive volume accumulation (3+ days above avg)",
-        "Price in tight base (5.6% range)"
-      ]
-    },
-    {
       "ticker": "FREQ.V",
       "grade": "C",
       "composite_score": 15.5,
@@ -1285,6 +1395,44 @@
       ]
     },
     {
+      "ticker": "BCF.V",
+      "grade": "C",
+      "composite_score": 15.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Builders Capital Mortgage Corp.",
+      "insider_name": "Loutitt, Sandy Luke",
+      "latest_role": "Director",
+      "latest_value_cad": 9399.390000000001,
+      "latest_trade_date": "2026-04-28",
+      "volume_ratio_5d": 1.0968,
+      "price_range_20d": 5.6,
+      "signal_reasons": [
+        "Progressive volume accumulation (3+ days above avg)",
+        "Price in tight base (5.6% range)"
+      ]
+    },
+    {
+      "ticker": "HODL.CN",
+      "grade": "C",
+      "composite_score": 15.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Sol Strategies Inc.",
+      "insider_name": "Guoga, Antanas (Tony)",
+      "latest_role": "10%Holder",
+      "latest_value_cad": 22386.3458,
+      "latest_trade_date": "2026-05-12",
+      "volume_ratio_5d": 1.1319,
+      "price_range_20d": 63.29,
+      "signal_reasons": [
+        "Insider buy $91,512 in 7d (10%Holder)",
+        "Progressive volume accumulation (3+ days above avg)"
+      ]
+    },
+    {
       "ticker": "SMRV.V",
       "grade": "C",
       "composite_score": 15.0,
@@ -1296,34 +1444,12 @@
       "latest_role": "Director",
       "latest_value_cad": 2400.0,
       "latest_trade_date": "2026-05-11",
-      "volume_ratio_5d": 1.9295,
-      "price_range_20d": 37.5,
+      "volume_ratio_5d": 1.9954,
+      "price_range_20d": 31.25,
       "signal_reasons": [
         "Insider buy $4,800 in 7d (Director)",
         "Cluster: 2+ transactions in 14d (multi-insider)",
-        "Volume 1.9x 20d avg"
-      ]
-    },
-    {
-      "ticker": "ABZ.V",
-      "grade": "C",
-      "composite_score": 15.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": true,
-      "issuer": "AsiaBaseMetals Inc.",
-      "insider_name": "Chowdhry, Rajinder",
-      "latest_role": "Director",
-      "latest_value_cad": 90.0,
-      "latest_trade_date": "2026-05-14",
-      "volume_ratio_5d": 1.629,
-      "price_range_20d": 112.5,
-      "signal_reasons": [
-        "Insider buy $1,690 in 7d (Director)",
-        "Cluster: 10+ transactions in 14d (multi-insider)",
-        "Volume 1.6x 20d avg",
-        "Upward momentum +6.7% in 5 days",
-        "Post-drop setup (>20% decline from 30d high)"
+        "Volume 2.0x 20d avg"
       ]
     },
     {
@@ -1347,61 +1473,45 @@
       ]
     },
     {
-      "ticker": "SCMI.V",
+      "ticker": "ABZ.V",
       "grade": "C",
-      "composite_score": 14.5,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Selkirk Copper Mines Inc.",
-      "insider_name": "Joudrie, Michael Colin",
-      "latest_role": "CEO",
-      "latest_value_cad": 1751000.3499999999,
-      "latest_trade_date": "2026-04-30",
-      "volume_ratio_5d": 1.5027,
-      "price_range_20d": 54.01,
-      "signal_reasons": [
-        "Volume 1.5x 20d avg",
-        "Progressive volume accumulation (3+ days above avg)"
-      ]
-    },
-    {
-      "ticker": "ACM.CN",
-      "grade": "C",
-      "composite_score": 14.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Allied Critical Metals Inc",
-      "insider_name": "Bonnell, Roy",
-      "latest_role": "CEO",
-      "latest_value_cad": 52049.99999999999,
-      "latest_trade_date": "2026-05-14",
-      "volume_ratio_5d": 0.6786,
-      "price_range_20d": 32.5,
-      "signal_reasons": [
-        "Insider buy $52,050 in 7d (CEO)",
-        "CEO/CFO buying"
-      ]
-    },
-    {
-      "ticker": "USS.V",
-      "grade": "C",
-      "composite_score": 14.0,
+      "composite_score": 15.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": true,
-      "issuer": "Uniserve Communications Corporation",
-      "insider_name": "Scholz, Michael Curt",
-      "latest_role": "10%Holder",
-      "latest_value_cad": 4550.0,
+      "issuer": "AsiaBaseMetals Inc.",
+      "insider_name": "Chowdhry, Rajinder",
+      "latest_role": "Director",
+      "latest_value_cad": 90.0,
       "latest_trade_date": "2026-05-14",
-      "volume_ratio_5d": 0.2611,
-      "price_range_20d": 12.31,
+      "volume_ratio_5d": 1.6289,
+      "price_range_20d": 112.5,
       "signal_reasons": [
-        "Insider buy $12,025 in 7d (10%Holder)",
-        "Cluster: 2+ transactions in 14d (multi-insider)",
-        "Price in tight base (12.3% range)"
+        "Insider buy $1,690 in 7d (Director)",
+        "Cluster: 10+ transactions in 14d (multi-insider)",
+        "Volume 1.6x 20d avg",
+        "Upward momentum +6.7% in 5 days",
+        "Post-drop setup (>20% decline from 30d high)"
+      ]
+    },
+    {
+      "ticker": "ALM.V",
+      "grade": "C",
+      "composite_score": 14.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Alliance Mining Corp.",
+      "insider_name": "Anderson, Christopher Ross",
+      "latest_role": "CEO",
+      "latest_value_cad": 125.0,
+      "latest_trade_date": "2026-05-14",
+      "volume_ratio_5d": 0.7248,
+      "price_range_20d": 0.0,
+      "signal_reasons": [
+        "Insider buy $375 in 7d (CEO)",
+        "CEO/CFO buying",
+        "Price in tight base (0.0% range)"
       ]
     },
     {
@@ -1421,46 +1531,6 @@
       "signal_reasons": [
         "CEO/CFO buying",
         "Buy/mktcap ratio 1.0% (very strong signal)"
-      ]
-    },
-    {
-      "ticker": "ZNX.V",
-      "grade": "C",
-      "composite_score": 14.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "ZincX Resources Corp.",
-      "insider_name": "Varshney, Peeyush Kumar",
-      "latest_role": "CEO",
-      "latest_value_cad": 370.0,
-      "latest_trade_date": "2026-05-08",
-      "volume_ratio_5d": 0.6015,
-      "price_range_20d": 0.0,
-      "signal_reasons": [
-        "Insider buy $370 in 7d (CEO)",
-        "CEO/CFO buying",
-        "Price in tight base (0.0% range)"
-      ]
-    },
-    {
-      "ticker": "ALM.V",
-      "grade": "C",
-      "composite_score": 14.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Alliance Mining Corp.",
-      "insider_name": "Anderson, Christopher Ross",
-      "latest_role": "CEO",
-      "latest_value_cad": 125.0,
-      "latest_trade_date": "2026-05-11",
-      "volume_ratio_5d": 0.7248,
-      "price_range_20d": 0.0,
-      "signal_reasons": [
-        "Insider buy $125 in 7d (CEO)",
-        "CEO/CFO buying",
-        "Price in tight base (0.0% range)"
       ]
     },
     {
@@ -1484,23 +1554,43 @@
       ]
     },
     {
-      "ticker": "MRZ.V",
+      "ticker": "USS.V",
       "grade": "C",
-      "composite_score": 13.0,
+      "composite_score": 14.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": true,
-      "issuer": "Mirasol Resources Ltd.",
-      "insider_name": "Tognetti, John",
-      "latest_role": "Director",
-      "latest_value_cad": 1312.5,
+      "issuer": "Uniserve Communications Corporation",
+      "insider_name": "Scholz, Michael Curt",
+      "latest_role": "10%Holder",
+      "latest_value_cad": 4550.0,
       "latest_trade_date": "2026-05-14",
-      "volume_ratio_5d": 0.2426,
-      "price_range_20d": 52.05,
+      "volume_ratio_5d": 0.1897,
+      "price_range_20d": 12.31,
       "signal_reasons": [
-        "Insider buy $5,152 in 7d (Director)",
+        "Insider buy $12,025 in 7d (10%Holder)",
         "Cluster: 2+ transactions in 14d (multi-insider)",
-        "Upward momentum +7.3% in 5 days"
+        "Price in tight base (12.3% range)"
+      ]
+    },
+    {
+      "ticker": "ZNX.V",
+      "grade": "C",
+      "composite_score": 14.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "ZincX Resources Corp.",
+      "insider_name": "Varshney, Peeyush Kumar",
+      "latest_role": "CEO",
+      "latest_value_cad": 370.0,
+      "latest_trade_date": "2026-05-08",
+      "volume_ratio_5d": 0.0,
+      "price_range_20d": 0.0,
+      "signal_reasons": [
+        "Insider buy $370 in 7d (CEO)",
+        "CEO/CFO buying",
+        "Price in tight base (0.0% range)"
       ]
     },
     {
@@ -1521,27 +1611,6 @@
         "Insider buy $2,340 in 7d (CEO)",
         "CEO/CFO buying",
         "Volume 1.9x 20d avg"
-      ]
-    },
-    {
-      "ticker": "FCI.V",
-      "grade": "C",
-      "composite_score": 12.5,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "First Canadian Graphite Inc.",
-      "insider_name": "LaGourgue, John",
-      "latest_role": "Director",
-      "latest_value_cad": 115.0,
-      "latest_trade_date": "2026-05-13",
-      "volume_ratio_5d": 1.895,
-      "price_range_20d": 54.17,
-      "signal_reasons": [
-        "Insider buy $10,530 in 7d (Director)",
-        "Volume 1.9x 20d avg",
-        "Progressive volume accumulation (3+ days above avg)",
-        "Post-drop setup (>20% decline from 30d high)"
       ]
     },
     {
@@ -1577,9 +1646,50 @@
       "latest_value_cad": 202037.80000000002,
       "latest_trade_date": "2026-03-26",
       "volume_ratio_5d": 1.7946,
-      "price_range_20d": 23.44,
+      "price_range_20d": 21.88,
       "signal_reasons": [
         "Volume 1.8x 20d avg",
+        "Progressive volume accumulation (3+ days above avg)"
+      ]
+    },
+    {
+      "ticker": "FCI.V",
+      "grade": "C",
+      "composite_score": 12.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "First Canadian Graphite Inc.",
+      "insider_name": "LaGourgue, John",
+      "latest_role": "Director",
+      "latest_value_cad": 115.0,
+      "latest_trade_date": "2026-05-13",
+      "volume_ratio_5d": 1.895,
+      "price_range_20d": 54.17,
+      "signal_reasons": [
+        "Insider buy $10,530 in 7d (Director)",
+        "Volume 1.9x 20d avg",
+        "Progressive volume accumulation (3+ days above avg)",
+        "Post-drop setup (>20% decline from 30d high)"
+      ]
+    },
+    {
+      "ticker": "PGZ.V",
+      "grade": "C",
+      "composite_score": 12.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Pan Global Resources Inc.",
+      "insider_name": "evans, patrick charles",
+      "latest_role": "Director",
+      "latest_value_cad": 13170.000000000002,
+      "latest_trade_date": "2026-05-08",
+      "volume_ratio_5d": 1.4214,
+      "price_range_20d": 29.73,
+      "signal_reasons": [
+        "Insider buy $13,170 in 7d (Director)",
+        "Volume 1.4x 20d avg",
         "Progressive volume accumulation (3+ days above avg)"
       ]
     },
@@ -1603,23 +1713,22 @@
       ]
     },
     {
-      "ticker": "PGZ.V",
+      "ticker": "AZR.V",
       "grade": "C",
       "composite_score": 12.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Pan Global Resources Inc.",
-      "insider_name": "evans, patrick charles",
-      "latest_role": "Director",
-      "latest_value_cad": 13170.000000000002,
-      "latest_trade_date": "2026-05-08",
-      "volume_ratio_5d": 1.4214,
-      "price_range_20d": 29.73,
+      "issuer": "Azarga Metals Corp.",
+      "insider_name": "Junbord, International Limited",
+      "latest_role": "10%Holder",
+      "latest_value_cad": 125000.01000000001,
+      "latest_trade_date": "2026-03-27",
+      "volume_ratio_5d": 1.0026,
+      "price_range_20d": 12.5,
       "signal_reasons": [
-        "Insider buy $13,170 in 7d (Director)",
-        "Volume 1.4x 20d avg",
-        "Progressive volume accumulation (3+ days above avg)"
+        "Price in tight base (12.5% range)",
+        "Near 20d breakout level (>90% of range)"
       ]
     },
     {
@@ -1662,25 +1771,6 @@
       ]
     },
     {
-      "ticker": "SAO.V",
-      "grade": "C",
-      "composite_score": 11.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "South Atlantic Gold Inc.",
-      "insider_name": "STOW, STEPHEN WILLIAM CANNING",
-      "latest_role": "Director",
-      "latest_value_cad": 33360.0,
-      "latest_trade_date": "2026-04-28",
-      "volume_ratio_5d": 1.2958,
-      "price_range_20d": 46.43,
-      "signal_reasons": [
-        "Near 20d breakout level (>90% of range)",
-        "Upward momentum +27.3% in 5 days"
-      ]
-    },
-    {
       "ticker": "LEGY.V",
       "grade": "C",
       "composite_score": 11.0,
@@ -1700,41 +1790,42 @@
       ]
     },
     {
-      "ticker": "NEV.V",
+      "ticker": "MTA.V",
       "grade": "C",
-      "composite_score": 11.0,
+      "composite_score": 10.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Nevada Sunrise Metals Corporation",
-      "insider_name": "Stanyer, Warren William",
-      "latest_role": "CEO",
-      "latest_value_cad": 600.0,
-      "latest_trade_date": "2026-05-04",
-      "volume_ratio_5d": 0.2564,
-      "price_range_20d": 57.14,
+      "issuer": "Metalla Royalty and Streaming Ltd.",
+      "insider_name": "Tether International, S.A. de C.V.",
+      "latest_role": "10%Holder",
+      "latest_value_cad": 310849.5442,
+      "latest_trade_date": "2026-05-08",
+      "volume_ratio_5d": 0.6545,
+      "price_range_20d": 23.19,
       "signal_reasons": [
-        "CEO/CFO buying",
-        "Upward momentum +16.7% in 5 days"
+        "Insider buy $310,850 in 7d (10%Holder)"
       ]
     },
     {
-      "ticker": "KTRI.V",
+      "ticker": "MRZ.V",
       "grade": "C",
-      "composite_score": 11.0,
+      "composite_score": 10.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Kootenay Resources Inc.",
-      "insider_name": "McDonald, James",
+      "cluster_buying_flag": true,
+      "issuer": "Mirasol Resources Ltd.",
+      "insider_name": "Tognetti, John",
       "latest_role": "Director",
-      "latest_value_cad": 320.0,
-      "latest_trade_date": "2026-04-29",
-      "volume_ratio_5d": 1.1076,
-      "price_range_20d": 27.27,
+      "latest_value_cad": 1312.5,
+      "latest_trade_date": "2026-05-14",
+      "volume_ratio_5d": 0.2425,
+      "price_range_20d": 51.35,
       "signal_reasons": [
-        "Near 20d breakout level (>90% of range)",
-        "Upward momentum +22.2% in 5 days"
+        "Insider buy $5,152 in 7d (Director)",
+        "Cluster: 2+ transactions in 14d (multi-insider)",
+        "Upward momentum +8.8% in 5 days",
+        "Post-drop setup (>20% decline from 30d high)"
       ]
     },
     {
@@ -1757,23 +1848,43 @@
       ]
     },
     {
-      "ticker": "PEI.V",
+      "ticker": "BBB.V",
       "grade": "C",
       "composite_score": 10.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Prospera Energy Inc.",
-      "insider_name": "Garg, Shubham",
-      "latest_role": "CEO",
-      "latest_value_cad": 5480.0,
-      "latest_trade_date": "2026-05-14",
-      "volume_ratio_5d": 0.7313,
-      "price_range_20d": 0.0,
+      "issuer": "Brixton Metals Corporation",
+      "insider_name": "Chen, Luogang",
+      "latest_role": "Director",
+      "latest_value_cad": 1230.0,
+      "latest_trade_date": "2026-05-08",
+      "volume_ratio_5d": 1.3834,
+      "price_range_20d": 36.25,
       "signal_reasons": [
-        "Insider buy $23,600 in 7d (CEO)",
-        "CEO/CFO buying",
-        "Price in tight base (0.0% range)",
+        "Insider buy $1,230 in 7d (Director)",
+        "Volume 1.4x 20d avg",
+        "Progressive volume accumulation (3+ days above avg)",
+        "Post-drop setup (>20% decline from 30d high)"
+      ]
+    },
+    {
+      "ticker": "ILC.V",
+      "grade": "C",
+      "composite_score": 10.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": true,
+      "issuer": "ILC Critical Minerals Ltd.",
+      "insider_name": "Wisbey, John Michael",
+      "latest_role": "Director",
+      "latest_value_cad": 500.0,
+      "latest_trade_date": "2026-05-13",
+      "volume_ratio_5d": 0.1281,
+      "price_range_20d": 50.0,
+      "signal_reasons": [
+        "Insider buy $1,125 in 7d (Director)",
+        "Cluster: 2+ transactions in 14d (multi-insider)",
         "Post-drop setup (>20% decline from 30d high)"
       ]
     },
@@ -1797,60 +1908,23 @@
       ]
     },
     {
-      "ticker": "MTA.V",
+      "ticker": "PEI.V",
       "grade": "C",
       "composite_score": 10.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Metalla Royalty and Streaming Ltd.",
-      "insider_name": "Tether International, S.A. de C.V.",
-      "latest_role": "10%Holder",
-      "latest_value_cad": 310849.5442,
-      "latest_trade_date": "2026-05-08",
-      "volume_ratio_5d": 0.6542,
-      "price_range_20d": 23.19,
+      "issuer": "Prospera Energy Inc.",
+      "insider_name": "Garg, Shubham",
+      "latest_role": "CEO",
+      "latest_value_cad": 8800.0,
+      "latest_trade_date": "2026-05-15",
+      "volume_ratio_5d": 0.7313,
+      "price_range_20d": 0.0,
       "signal_reasons": [
-        "Insider buy $310,850 in 7d (10%Holder)"
-      ]
-    },
-    {
-      "ticker": "ILC.V",
-      "grade": "C",
-      "composite_score": 10.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": true,
-      "issuer": "ILC Critical Minerals Ltd.",
-      "insider_name": "Wisbey, John Michael",
-      "latest_role": "Director",
-      "latest_value_cad": 500.0,
-      "latest_trade_date": "2026-05-13",
-      "volume_ratio_5d": 0.1281,
-      "price_range_20d": 50.0,
-      "signal_reasons": [
-        "Insider buy $1,125 in 7d (Director)",
-        "Cluster: 2+ transactions in 14d (multi-insider)"
-      ]
-    },
-    {
-      "ticker": "BBB.V",
-      "grade": "C",
-      "composite_score": 10.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Brixton Metals Corporation",
-      "insider_name": "Chen, Luogang",
-      "latest_role": "Director",
-      "latest_value_cad": 1230.0,
-      "latest_trade_date": "2026-05-08",
-      "volume_ratio_5d": 1.3835,
-      "price_range_20d": 36.25,
-      "signal_reasons": [
-        "Insider buy $1,230 in 7d (Director)",
-        "Volume 1.4x 20d avg",
-        "Progressive volume accumulation (3+ days above avg)",
+        "Insider buy $46,000 in 7d (CEO)",
+        "CEO/CFO buying",
+        "Price in tight base (0.0% range)",
         "Post-drop setup (>20% decline from 30d high)"
       ]
     },
@@ -1867,10 +1941,29 @@
       "latest_value_cad": 860.0,
       "latest_trade_date": "2026-05-13",
       "volume_ratio_5d": 1.2795,
-      "price_range_20d": 44.44,
+      "price_range_20d": 43.48,
       "signal_reasons": [
         "Insider buy $8,500 in 7d (Director)",
         "Progressive volume accumulation (3+ days above avg)"
+      ]
+    },
+    {
+      "ticker": "AUEN.V",
+      "grade": "C",
+      "composite_score": 8.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Golden Sky Minerals Corp. - formerly Luckystrike Resources Ltd.",
+      "insider_name": "Newell, John",
+      "latest_role": "CEO",
+      "latest_value_cad": 1500.0,
+      "latest_trade_date": "2026-05-15",
+      "volume_ratio_5d": 0.8458,
+      "price_range_20d": 20.0,
+      "signal_reasons": [
+        "Insider buy $3,178 in 7d (CEO)",
+        "CEO/CFO buying"
       ]
     },
     {
@@ -1885,11 +1978,30 @@
       "latest_role": "CEO",
       "latest_value_cad": 7860.0,
       "latest_trade_date": "2026-05-11",
-      "volume_ratio_5d": 0.8562,
+      "volume_ratio_5d": 0.856,
       "price_range_20d": 29.24,
       "signal_reasons": [
         "Insider buy $23,760 in 7d (CEO)",
         "CEO/CFO buying"
+      ]
+    },
+    {
+      "ticker": "BHS.V",
+      "grade": "C",
+      "composite_score": 8.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Bayhorse Silver Inc.",
+      "insider_name": "Doulis, Christos",
+      "latest_role": "Director",
+      "latest_value_cad": 1650.0,
+      "latest_trade_date": "2026-05-15",
+      "volume_ratio_5d": 0.5958,
+      "price_range_20d": 33.33,
+      "signal_reasons": [
+        "Insider buy $1,650 in 7d (Director)",
+        "Near 20d breakout level (>90% of range)"
       ]
     },
     {
@@ -1911,157 +2023,6 @@
       ]
     },
     {
-      "ticker": "VGD.V",
-      "grade": "C",
-      "composite_score": 8.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Visible Gold Mines Inc.",
-      "insider_name": "Lacoste, Jean-Marc",
-      "latest_role": "CEO",
-      "latest_value_cad": 6352.5,
-      "latest_trade_date": "2026-05-08",
-      "volume_ratio_5d": 0.5164,
-      "price_range_20d": 17.65,
-      "signal_reasons": [
-        "Insider buy $10,190 in 7d (CEO)",
-        "CEO/CFO buying"
-      ]
-    },
-    {
-      "ticker": "TGOL.V",
-      "grade": "C",
-      "composite_score": 8.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Thunder Gold Corp.",
-      "insider_name": "Strashin, Elliot",
-      "latest_role": "CEO",
-      "latest_value_cad": 2750.0,
-      "latest_trade_date": "2026-05-08",
-      "volume_ratio_5d": 0.8967,
-      "price_range_20d": 36.36,
-      "signal_reasons": [
-        "Insider buy $4,840 in 7d (CEO)",
-        "CEO/CFO buying"
-      ]
-    },
-    {
-      "ticker": "SOMA.V",
-      "grade": "C",
-      "composite_score": 8.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Soma Gold Corp.",
-      "insider_name": "Storz, Julian Nicolas",
-      "latest_role": "CEO",
-      "latest_value_cad": 55000.00000000001,
-      "latest_trade_date": "2026-05-06",
-      "volume_ratio_5d": 1.0979,
-      "price_range_20d": 113.98,
-      "signal_reasons": [
-        "CEO/CFO buying",
-        "Post-drop setup (>20% decline from 30d high)"
-      ]
-    },
-    {
-      "ticker": "AUEN.V",
-      "grade": "C",
-      "composite_score": 8.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Golden Sky Minerals Corp. - formerly Luckystrike Resources Ltd.",
-      "insider_name": "Newell, John",
-      "latest_role": "CEO",
-      "latest_value_cad": 1677.5,
-      "latest_trade_date": "2026-05-14",
-      "volume_ratio_5d": 0.8458,
-      "price_range_20d": 20.0,
-      "signal_reasons": [
-        "Insider buy $1,678 in 7d (CEO)",
-        "CEO/CFO buying"
-      ]
-    },
-    {
-      "ticker": "ICG.CN",
-      "grade": "C",
-      "composite_score": 8.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "ICG Silver & Gold Ltd.",
-      "insider_name": "Sirbovan, Steven",
-      "latest_role": "CEO",
-      "latest_value_cad": 1350.0,
-      "latest_trade_date": "2026-05-01",
-      "volume_ratio_5d": 0.7062,
-      "price_range_20d": 28.0,
-      "signal_reasons": [
-        "CEO/CFO buying"
-      ]
-    },
-    {
-      "ticker": "GAMA.V",
-      "grade": "C",
-      "composite_score": 8.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Gamma Resources Ltd. formerly Gabo Mining Ltd.",
-      "insider_name": "Alonso-Mendoza, Gabriel",
-      "latest_role": "Director",
-      "latest_value_cad": 13200.0,
-      "latest_trade_date": "2026-05-01",
-      "volume_ratio_5d": 0.2182,
-      "price_range_20d": 23.08,
-      "signal_reasons": [
-        "Near 20d breakout level (>90% of range)"
-      ]
-    },
-    {
-      "ticker": "FLM.CN",
-      "grade": "C",
-      "composite_score": 8.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "First Lithium Minerals Corp.",
-      "insider_name": "Saltsman, Robert",
-      "latest_role": "CEO",
-      "latest_value_cad": 2570.0,
-      "latest_trade_date": "2026-05-12",
-      "volume_ratio_5d": 0.3229,
-      "price_range_20d": 36.0,
-      "signal_reasons": [
-        "Insider buy $7,194 in 7d (CEO)",
-        "CEO/CFO buying"
-      ]
-    },
-    {
-      "ticker": "CUPR.CN",
-      "grade": "C",
-      "composite_score": 8.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Super Copper Corp.",
-      "insider_name": "Zachary, Dymala-Dolesky",
-      "latest_role": "Director",
-      "latest_value_cad": 710.0,
-      "latest_trade_date": "2026-05-14",
-      "volume_ratio_5d": 1.8153,
-      "price_range_20d": 27.94,
-      "signal_reasons": [
-        "Insider buy $710 in 7d (Director)",
-        "Volume 1.8x 20d avg",
-        "Upward momentum +17.2% in 5 days"
-      ]
-    },
-    {
       "ticker": "JTWO.V",
       "grade": "C",
       "composite_score": 8.0,
@@ -2075,24 +2036,6 @@
       "latest_trade_date": "2026-05-01",
       "volume_ratio_5d": 1.2535,
       "price_range_20d": 50.42,
-      "signal_reasons": [
-        "CEO/CFO buying"
-      ]
-    },
-    {
-      "ticker": "HYLQ.CN",
-      "grade": "C",
-      "composite_score": 8.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "HYLQ STRATEGY CORP.",
-      "insider_name": "Guoga, Antanas (Tony)",
-      "latest_role": "CEO",
-      "latest_value_cad": 7167.0,
-      "latest_trade_date": "2026-05-01",
-      "volume_ratio_5d": 0.2313,
-      "price_range_20d": 42.03,
       "signal_reasons": [
         "CEO/CFO buying"
       ]
@@ -2117,19 +2060,19 @@
       ]
     },
     {
-      "ticker": "NIO.V",
+      "ticker": "SAGE.V",
       "grade": "C",
       "composite_score": 8.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Nio Strategic Metals Inc.",
-      "insider_name": "Blanchette, Jean-Sebastien",
+      "issuer": "Sage Potash Corp.",
+      "insider_name": "Varas, Patricio",
       "latest_role": "CEO",
-      "latest_value_cad": 2773.0,
-      "latest_trade_date": "2026-05-06",
-      "volume_ratio_5d": 1.1373,
-      "price_range_20d": 36.36,
+      "latest_value_cad": 3000.0,
+      "latest_trade_date": "2026-05-07",
+      "volume_ratio_5d": 0.9129,
+      "price_range_20d": 37.93,
       "signal_reasons": [
         "CEO/CFO buying",
         "Post-drop setup (>20% decline from 30d high)"
@@ -2155,20 +2098,77 @@
       ]
     },
     {
-      "ticker": "WPG.V",
+      "ticker": "VGD.V",
       "grade": "C",
       "composite_score": 8.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "West Point Gold Corp.",
-      "insider_name": "Singh, Amandip",
+      "issuer": "Visible Gold Mines Inc.",
+      "insider_name": "Lacoste, Jean-Marc",
       "latest_role": "CEO",
-      "latest_value_cad": 14155.0,
-      "latest_trade_date": "2026-05-01",
-      "volume_ratio_5d": 0.8504,
-      "price_range_20d": 24.14,
+      "latest_value_cad": 6352.5,
+      "latest_trade_date": "2026-05-08",
+      "volume_ratio_5d": 0.5164,
+      "price_range_20d": 17.65,
       "signal_reasons": [
+        "Insider buy $10,190 in 7d (CEO)",
+        "CEO/CFO buying"
+      ]
+    },
+    {
+      "ticker": "STND.V",
+      "grade": "C",
+      "composite_score": 8.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Standard Uranium Ltd.",
+      "insider_name": "Krywaniuk, Alicia Lyn",
+      "latest_role": "CEO",
+      "latest_value_cad": 285.0,
+      "latest_trade_date": "2026-05-01",
+      "volume_ratio_5d": 0.9065,
+      "price_range_20d": 25.0,
+      "signal_reasons": [
+        "CEO/CFO buying"
+      ]
+    },
+    {
+      "ticker": "SOMA.V",
+      "grade": "C",
+      "composite_score": 8.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Soma Gold Corp.",
+      "insider_name": "Storz, Julian Nicolas",
+      "latest_role": "CEO",
+      "latest_value_cad": 55000.00000000001,
+      "latest_trade_date": "2026-05-06",
+      "volume_ratio_5d": 1.0979,
+      "price_range_20d": 113.98,
+      "signal_reasons": [
+        "CEO/CFO buying",
+        "Post-drop setup (>20% decline from 30d high)"
+      ]
+    },
+    {
+      "ticker": "TGOL.V",
+      "grade": "C",
+      "composite_score": 8.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Thunder Gold Corp.",
+      "insider_name": "Strashin, Elliot",
+      "latest_role": "CEO",
+      "latest_value_cad": 2750.0,
+      "latest_trade_date": "2026-05-08",
+      "volume_ratio_5d": 0.8967,
+      "price_range_20d": 36.36,
+      "signal_reasons": [
+        "Insider buy $4,840 in 7d (CEO)",
         "CEO/CFO buying"
       ]
     },
@@ -2188,6 +2188,45 @@
       "price_range_20d": 24.14,
       "signal_reasons": [
         "Insider buy $6,300 in 7d (CEO)",
+        "CEO/CFO buying",
+        "Post-drop setup (>20% decline from 30d high)"
+      ]
+    },
+    {
+      "ticker": "NIO.V",
+      "grade": "C",
+      "composite_score": 8.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Nio Strategic Metals Inc.",
+      "insider_name": "Blanchette, Jean-Sebastien",
+      "latest_role": "CEO",
+      "latest_value_cad": 2773.0,
+      "latest_trade_date": "2026-05-06",
+      "volume_ratio_5d": 1.1373,
+      "price_range_20d": 36.36,
+      "signal_reasons": [
+        "CEO/CFO buying",
+        "Post-drop setup (>20% decline from 30d high)"
+      ]
+    },
+    {
+      "ticker": "FLM.CN",
+      "grade": "C",
+      "composite_score": 8.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "First Lithium Minerals Corp.",
+      "insider_name": "Saltsman, Robert",
+      "latest_role": "CEO",
+      "latest_value_cad": 2570.0,
+      "latest_trade_date": "2026-05-12",
+      "volume_ratio_5d": 0.3229,
+      "price_range_20d": 36.0,
+      "signal_reasons": [
+        "Insider buy $7,194 in 7d (CEO)",
         "CEO/CFO buying"
       ]
     },
@@ -2210,43 +2249,6 @@
       ]
     },
     {
-      "ticker": "PBIT.CN",
-      "grade": "C",
-      "composite_score": 8.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "POSaBIT Systems Corporation",
-      "insider_name": "Jaffe, Bruce Alan",
-      "latest_role": "Director",
-      "latest_value_cad": 900.0,
-      "latest_trade_date": "2026-04-30",
-      "volume_ratio_5d": 0.0,
-      "price_range_20d": 50.0,
-      "signal_reasons": [
-        "Near 20d breakout level (>90% of range)"
-      ]
-    },
-    {
-      "ticker": "SAGE.V",
-      "grade": "C",
-      "composite_score": 8.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Sage Potash Corp.",
-      "insider_name": "Varas, Patricio",
-      "latest_role": "CEO",
-      "latest_value_cad": 3000.0,
-      "latest_trade_date": "2026-05-07",
-      "volume_ratio_5d": 0.9129,
-      "price_range_20d": 37.93,
-      "signal_reasons": [
-        "CEO/CFO buying",
-        "Post-drop setup (>20% decline from 30d high)"
-      ]
-    },
-    {
       "ticker": "ROOF.V",
       "grade": "C",
       "composite_score": 8.0,
@@ -2265,21 +2267,23 @@
       ]
     },
     {
-      "ticker": "STND.V",
+      "ticker": "CUPR.CN",
       "grade": "C",
       "composite_score": 8.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Standard Uranium Ltd.",
-      "insider_name": "Krywaniuk, Alicia Lyn",
-      "latest_role": "CEO",
-      "latest_value_cad": 285.0,
-      "latest_trade_date": "2026-05-01",
-      "volume_ratio_5d": 0.9065,
-      "price_range_20d": 25.0,
+      "issuer": "Super Copper Corp.",
+      "insider_name": "Zachary, Dymala-Dolesky",
+      "latest_role": "Director",
+      "latest_value_cad": 710.0,
+      "latest_trade_date": "2026-05-14",
+      "volume_ratio_5d": 1.8153,
+      "price_range_20d": 27.94,
       "signal_reasons": [
-        "CEO/CFO buying"
+        "Insider buy $710 in 7d (Director)",
+        "Volume 1.8x 20d avg",
+        "Upward momentum +17.2% in 5 days"
       ]
     },
     {
@@ -2314,26 +2318,8 @@
       "latest_role": "10%Holder",
       "latest_value_cad": 63085.5,
       "latest_trade_date": "2026-05-07",
-      "volume_ratio_5d": 1.2553,
+      "volume_ratio_5d": 1.2554,
       "price_range_20d": 16.24,
-      "signal_reasons": [
-        "Progressive volume accumulation (3+ days above avg)"
-      ]
-    },
-    {
-      "ticker": "FRG.CN",
-      "grade": "C",
-      "composite_score": 7.5,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Forge Resources Corp. formerly, Benjamin Hill Mining Corp.",
-      "insider_name": "Schmidtke, Ralf Holger",
-      "latest_role": "10%Holder",
-      "latest_value_cad": 8800.0,
-      "latest_trade_date": "2026-05-01",
-      "volume_ratio_5d": 1.0005,
-      "price_range_20d": 15.73,
       "signal_reasons": [
         "Progressive volume accumulation (3+ days above avg)"
       ]
@@ -2358,26 +2344,6 @@
       ]
     },
     {
-      "ticker": "FG.V",
-      "grade": "C",
-      "composite_score": 7.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Falcon Gold Corp.",
-      "insider_name": "Rayani, Karim",
-      "latest_role": "Director",
-      "latest_value_cad": 75.0,
-      "latest_trade_date": "2026-05-01",
-      "volume_ratio_5d": 0.9229,
-      "price_range_20d": 28.57,
-      "signal_reasons": [
-        "Near 20d breakout level (>90% of range)",
-        "Upward momentum +16.7% in 5 days",
-        "Post-drop setup (>20% decline from 30d high)"
-      ]
-    },
-    {
       "ticker": "CTZ.V",
       "grade": "C",
       "composite_score": 6.5,
@@ -2389,10 +2355,10 @@
       "latest_role": "Director",
       "latest_value_cad": 999.4399999999999,
       "latest_trade_date": "2026-05-04",
-      "volume_ratio_5d": 1.3677,
+      "volume_ratio_5d": 1.3287,
       "price_range_20d": 11.67,
       "signal_reasons": [
-        "Volume 1.4x 20d avg",
+        "Volume 1.3x 20d avg",
         "Price in tight base (11.7% range)"
       ]
     },
@@ -2426,10 +2392,30 @@
       "latest_role": "10%Holder",
       "latest_value_cad": 61565.00000000001,
       "latest_trade_date": "2026-05-04",
-      "volume_ratio_5d": 0.2765,
+      "volume_ratio_5d": 0.2724,
       "price_range_20d": 114.29,
       "signal_reasons": [
         "Buy/mktcap ratio 5.5% (very strong signal)"
+      ]
+    },
+    {
+      "ticker": "GDP.V",
+      "grade": "C",
+      "composite_score": 5.5,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Golden Pursuit Resources Ltd.",
+      "insider_name": "McClay, Kathleen",
+      "latest_role": "10%Holder",
+      "latest_value_cad": 3795.0,
+      "latest_trade_date": "2026-05-11",
+      "volume_ratio_5d": 1.478,
+      "price_range_20d": 37.5,
+      "signal_reasons": [
+        "Insider buy $15,305 in 7d (10%Holder)",
+        "Volume 1.5x 20d avg",
+        "Upward momentum +6.7% in 5 days"
       ]
     },
     {
@@ -2444,47 +2430,11 @@
       "latest_role": "Director",
       "latest_value_cad": 10500.0,
       "latest_trade_date": "2026-05-12",
-      "volume_ratio_5d": 1.5059,
+      "volume_ratio_5d": 1.5034,
       "price_range_20d": 23.81,
       "signal_reasons": [
         "Insider buy $10,500 in 7d (Director)",
         "Volume 1.5x 20d avg"
-      ]
-    },
-    {
-      "ticker": "CMU.V",
-      "grade": "C",
-      "composite_score": 4.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Comet Industries Ltd.",
-      "insider_name": "ALFONSO, JESUS",
-      "latest_role": "Director",
-      "latest_value_cad": 12000.0,
-      "latest_trade_date": "2026-05-01",
-      "volume_ratio_5d": 0.0,
-      "price_range_20d": 12.5,
-      "signal_reasons": [
-        "Price in tight base (12.5% range)"
-      ]
-    },
-    {
-      "ticker": "AZR.V",
-      "grade": "C",
-      "composite_score": 4.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Azarga Metals Corp.",
-      "insider_name": "Junbord, International Limited",
-      "latest_role": "10%Holder",
-      "latest_value_cad": 125000.01000000001,
-      "latest_trade_date": "2026-03-27",
-      "volume_ratio_5d": 1.0026,
-      "price_range_20d": 12.9,
-      "signal_reasons": [
-        "Price in tight base (12.9% range)"
       ]
     },
     {
@@ -2503,6 +2453,24 @@
       "price_range_20d": 14.12,
       "signal_reasons": [
         "Price in tight base (14.1% range)"
+      ]
+    },
+    {
+      "ticker": "ICGH.V",
+      "grade": "C",
+      "composite_score": 3.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "IC Group Holdings Inc. (formerly Cuspis Capital II Ltd.)",
+      "insider_name": "Elliott, C. Fraser",
+      "latest_role": "Director",
+      "latest_value_cad": 25970.0,
+      "latest_trade_date": "2026-05-04",
+      "volume_ratio_5d": 0.0304,
+      "price_range_20d": 23.53,
+      "signal_reasons": [
+        "Upward momentum +12.1% in 5 days"
       ]
     },
     {
@@ -2525,24 +2493,6 @@
       ]
     },
     {
-      "ticker": "ICGH.V",
-      "grade": "C",
-      "composite_score": 3.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "IC Group Holdings Inc. (formerly Cuspis Capital II Ltd.)",
-      "insider_name": "Elliott, C. Fraser",
-      "latest_role": "Director",
-      "latest_value_cad": 25970.0,
-      "latest_trade_date": "2026-05-04",
-      "volume_ratio_5d": 0.0304,
-      "price_range_20d": 23.53,
-      "signal_reasons": [
-        "Upward momentum +12.1% in 5 days"
-      ]
-    },
-    {
       "ticker": "SHOW.CN",
       "grade": "C",
       "composite_score": 2.5,
@@ -2559,22 +2509,6 @@
       "signal_reasons": [
         "Volume 1.4x 20d avg"
       ]
-    },
-    {
-      "ticker": "VRB.V",
-      "grade": "C",
-      "composite_score": 2.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Vanadiumcorp Resource Inc.",
-      "insider_name": "Davenport, kristien",
-      "latest_role": "Director",
-      "latest_value_cad": 1500.0,
-      "latest_trade_date": "2026-04-30",
-      "volume_ratio_5d": 1.0728,
-      "price_range_20d": 28.57,
-      "signal_reasons": []
     },
     {
       "ticker": "GTCH.CN",
@@ -2611,22 +2545,20 @@
       "signal_reasons": []
     },
     {
-      "ticker": "GRUN.CN",
+      "ticker": "VRB.V",
       "grade": "C",
       "composite_score": 2.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Gold Runner Exploration Inc.",
-      "insider_name": "Wensley, Christopher James",
+      "issuer": "Vanadiumcorp Resource Inc.",
+      "insider_name": "Davenport, kristien",
       "latest_role": "Director",
-      "latest_value_cad": 730.0,
-      "latest_trade_date": "2026-05-08",
-      "volume_ratio_5d": 0.8783,
-      "price_range_20d": 18.67,
-      "signal_reasons": [
-        "Insider buy $1,090 in 7d (Director)"
-      ]
+      "latest_value_cad": 1500.0,
+      "latest_trade_date": "2026-04-30",
+      "volume_ratio_5d": 1.0728,
+      "price_range_20d": 28.57,
+      "signal_reasons": []
     },
     {
       "ticker": "OPW.V",
@@ -2647,38 +2579,22 @@
       ]
     },
     {
-      "ticker": "BBM.CN",
+      "ticker": "GRUN.CN",
       "grade": "C",
-      "composite_score": 0.0,
+      "composite_score": 2.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Blueberries Medical Corp.",
-      "insider_name": "Rodriguez, Guillermo Pablo",
+      "issuer": "Gold Runner Exploration Inc.",
+      "insider_name": "Wensley, Christopher James",
       "latest_role": "Director",
-      "latest_value_cad": 124.0,
-      "latest_trade_date": "2026-05-04",
-      "volume_ratio_5d": 0.469,
-      "price_range_20d": 50.0,
+      "latest_value_cad": 730.0,
+      "latest_trade_date": "2026-05-08",
+      "volume_ratio_5d": 0.8783,
+      "price_range_20d": 18.67,
       "signal_reasons": [
-        "Post-drop setup (>20% decline from 30d high)"
+        "Insider buy $1,090 in 7d (Director)"
       ]
-    },
-    {
-      "ticker": "BWLK.V",
-      "grade": "C",
-      "composite_score": 0.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Boardwalktech Software Corp.",
-      "insider_name": "Bennet, Steve",
-      "latest_role": "Director",
-      "latest_value_cad": 52500.00000000001,
-      "latest_trade_date": "2026-03-31",
-      "volume_ratio_5d": 0.2296,
-      "price_range_20d": 40.0,
-      "signal_reasons": []
     },
     {
       "ticker": "BETR.CN",
@@ -2697,53 +2613,69 @@
       "signal_reasons": []
     },
     {
-      "ticker": "BHS.V",
+      "ticker": "BBM.CN",
       "grade": "C",
       "composite_score": 0.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Bayhorse Silver Inc.",
-      "insider_name": "Doulis, Christos",
+      "issuer": "Blueberries Medical Corp.",
+      "insider_name": "Rodriguez, Guillermo Pablo",
       "latest_role": "Director",
-      "latest_value_cad": 2500.0,
-      "latest_trade_date": "2026-05-07",
-      "volume_ratio_5d": 0.5958,
-      "price_range_20d": 36.36,
+      "latest_value_cad": 124.0,
+      "latest_trade_date": "2026-05-04",
+      "volume_ratio_5d": 0.469,
+      "price_range_20d": 50.0,
       "signal_reasons": [
         "Post-drop setup (>20% decline from 30d high)"
       ]
     },
     {
-      "ticker": "CAT.CN",
+      "ticker": "CQX.CN",
       "grade": "C",
       "composite_score": 0.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "CAT Strategic Metals Corporation",
-      "insider_name": "Rosner, Robert",
+      "issuer": "Copper Quest Exploration Inc.",
+      "insider_name": "Matovich, Allan Peter",
       "latest_role": "Director",
-      "latest_value_cad": 9000.0,
-      "latest_trade_date": "2026-04-20",
-      "volume_ratio_5d": 0.0145,
-      "price_range_20d": 100.0,
+      "latest_value_cad": 17765.0,
+      "latest_trade_date": "2026-05-07",
+      "volume_ratio_5d": 0.6831,
+      "price_range_20d": 38.89,
       "signal_reasons": []
     },
     {
-      "ticker": "ECR.V",
+      "ticker": "BWLK.V",
       "grade": "C",
       "composite_score": 0.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Cartier Resources Inc.",
-      "insider_name": "Mullan, Glenn J",
+      "issuer": "Boardwalktech Software Corp.",
+      "insider_name": "Bennet, Steve",
       "latest_role": "Director",
-      "latest_value_cad": 12250.0,
-      "latest_trade_date": "2026-05-04",
-      "volume_ratio_5d": 1.269,
-      "price_range_20d": 23.08,
+      "latest_value_cad": 52500.00000000001,
+      "latest_trade_date": "2026-03-31",
+      "volume_ratio_5d": 0.2296,
+      "price_range_20d": 40.0,
+      "signal_reasons": []
+    },
+    {
+      "ticker": "CTA.V",
+      "grade": "C",
+      "composite_score": 0.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Centaurus Energy Inc.",
+      "insider_name": "Tawil, David",
+      "latest_role": "Director",
+      "latest_value_cad": 140.0,
+      "latest_trade_date": "2026-05-06",
+      "volume_ratio_5d": 0.0,
+      "price_range_20d": 17.89,
       "signal_reasons": []
     },
     {
@@ -2765,22 +2697,36 @@
       ]
     },
     {
-      "ticker": "CQX.CN",
+      "ticker": "ECR.V",
       "grade": "C",
       "composite_score": 0.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Copper Quest Exploration Inc.",
-      "insider_name": "Matovich, Allan Peter",
+      "issuer": "Cartier Resources Inc.",
+      "insider_name": "Mullan, Glenn J",
       "latest_role": "Director",
-      "latest_value_cad": 17765.0,
-      "latest_trade_date": "2026-05-07",
-      "volume_ratio_5d": 0.6831,
-      "price_range_20d": 38.89,
-      "signal_reasons": [
-        "Post-drop setup (>20% decline from 30d high)"
-      ]
+      "latest_value_cad": 12250.0,
+      "latest_trade_date": "2026-05-04",
+      "volume_ratio_5d": 1.269,
+      "price_range_20d": 23.08,
+      "signal_reasons": []
+    },
+    {
+      "ticker": "IGO.V",
+      "grade": "C",
+      "composite_score": 0.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Independence Gold Corp.",
+      "insider_name": "Gestion Bouca Inc",
+      "latest_role": "10%Holder",
+      "latest_value_cad": 25000.0,
+      "latest_trade_date": "2026-05-06",
+      "volume_ratio_5d": 1.0349,
+      "price_range_20d": 23.81,
+      "signal_reasons": []
     },
     {
       "ticker": "FRSH.V",
@@ -2801,52 +2747,40 @@
       ]
     },
     {
-      "ticker": "CTA.V",
+      "ticker": "KRY.V",
       "grade": "C",
       "composite_score": 0.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Centaurus Energy Inc.",
-      "insider_name": "Tawil, David",
+      "issuer": "Koryx Copper S.A. (formerly Koryx Copper Inc.)",
+      "insider_name": "Loots, Charles Edward",
       "latest_role": "Director",
-      "latest_value_cad": 140.0,
-      "latest_trade_date": "2026-05-06",
-      "volume_ratio_5d": 0.0,
-      "price_range_20d": 17.89,
-      "signal_reasons": []
+      "latest_value_cad": 20094.0,
+      "latest_trade_date": "2026-05-13",
+      "volume_ratio_5d": 0.7116,
+      "price_range_20d": 29.91,
+      "signal_reasons": [
+        "Insider buy $20,094 in 7d (Director)"
+      ]
     },
     {
-      "ticker": "IGO.V",
+      "ticker": "KOG.CN",
       "grade": "C",
       "composite_score": 0.0,
       "accumulation_flag": false,
       "pre_breakout_flag": false,
       "cluster_buying_flag": false,
-      "issuer": "Independence Gold Corp.",
-      "insider_name": "Gestion Bouca Inc",
-      "latest_role": "10%Holder",
-      "latest_value_cad": 25000.0,
-      "latest_trade_date": "2026-05-06",
-      "volume_ratio_5d": 1.0349,
-      "price_range_20d": 23.81,
-      "signal_reasons": []
-    },
-    {
-      "ticker": "INTR.V",
-      "grade": "C",
-      "composite_score": 0.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Intrepid Metals Corp.",
-      "insider_name": "Barnholden, Daniel",
+      "issuer": "KO Gold Inc.",
+      "insider_name": "ANDERSON, JOHN",
       "latest_role": "Director",
-      "latest_value_cad": 40780.0,
-      "latest_trade_date": "2026-05-01",
-      "volume_ratio_5d": 0.8717,
-      "price_range_20d": 31.52,
-      "signal_reasons": []
+      "latest_value_cad": 12600.0,
+      "latest_trade_date": "2026-05-10",
+      "volume_ratio_5d": 1.0079,
+      "price_range_20d": 53.66,
+      "signal_reasons": [
+        "Insider buy $12,600 in 7d (Director)"
+      ]
     },
     {
       "ticker": "KG.V",
@@ -2878,61 +2812,8 @@
       "latest_role": "Director",
       "latest_value_cad": 60000.0,
       "latest_trade_date": "2026-04-27",
-      "volume_ratio_5d": 0.6864,
+      "volume_ratio_5d": 0.6866,
       "price_range_20d": 18.14,
-      "signal_reasons": []
-    },
-    {
-      "ticker": "KOG.CN",
-      "grade": "C",
-      "composite_score": 0.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "KO Gold Inc.",
-      "insider_name": "ANDERSON, JOHN",
-      "latest_role": "Director",
-      "latest_value_cad": 12600.0,
-      "latest_trade_date": "2026-05-10",
-      "volume_ratio_5d": 1.0079,
-      "price_range_20d": 53.66,
-      "signal_reasons": [
-        "Insider buy $12,600 in 7d (Director)",
-        "Post-drop setup (>20% decline from 30d high)"
-      ]
-    },
-    {
-      "ticker": "KRY.V",
-      "grade": "C",
-      "composite_score": 0.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Koryx Copper S.A. (formerly Koryx Copper Inc.)",
-      "insider_name": "Loots, Charles Edward",
-      "latest_role": "Director",
-      "latest_value_cad": 20094.0,
-      "latest_trade_date": "2026-05-13",
-      "volume_ratio_5d": 0.7116,
-      "price_range_20d": 29.91,
-      "signal_reasons": [
-        "Insider buy $20,094 in 7d (Director)"
-      ]
-    },
-    {
-      "ticker": "HAY.V",
-      "grade": "C",
-      "composite_score": 0.0,
-      "accumulation_flag": false,
-      "pre_breakout_flag": false,
-      "cluster_buying_flag": false,
-      "issuer": "Hayasa Metals Inc.",
-      "insider_name": "Moore, Dennis",
-      "latest_role": "CEO",
-      "latest_value_cad": 24317.8,
-      "latest_trade_date": "2026-04-24",
-      "volume_ratio_5d": 0.6274,
-      "price_range_20d": 30.77,
       "signal_reasons": []
     },
     {
@@ -2947,8 +2828,24 @@
       "latest_role": "Director",
       "latest_value_cad": 3562.5,
       "latest_trade_date": "2026-05-01",
-      "volume_ratio_5d": 0.5736,
+      "volume_ratio_5d": 0.5438,
       "price_range_20d": 21.05,
+      "signal_reasons": []
+    },
+    {
+      "ticker": "HAY.V",
+      "grade": "C",
+      "composite_score": 0.0,
+      "accumulation_flag": false,
+      "pre_breakout_flag": false,
+      "cluster_buying_flag": false,
+      "issuer": "Hayasa Metals Inc.",
+      "insider_name": "Moore, Dennis",
+      "latest_role": "CEO",
+      "latest_value_cad": 24317.8,
+      "latest_trade_date": "2026-04-24",
+      "volume_ratio_5d": 0.6274,
+      "price_range_20d": 28.57,
       "signal_reasons": []
     },
     {
@@ -2961,12 +2858,12 @@
       "issuer": "Palamina Corp.",
       "insider_name": "Thomson, Andrew",
       "latest_role": "Director",
-      "latest_value_cad": 2380.0,
-      "latest_trade_date": "2026-05-12",
+      "latest_value_cad": 592.0,
+      "latest_trade_date": "2026-05-14",
       "volume_ratio_5d": 0.9506,
       "price_range_20d": 23.53,
       "signal_reasons": [
-        "Insider buy $12,455 in 7d (Director)"
+        "Insider buy $13,047 in 7d (Director)"
       ]
     },
     {
@@ -3013,11 +2910,9 @@
       "latest_role": "CEO",
       "latest_value_cad": 26000.0,
       "latest_trade_date": "2026-04-30",
-      "volume_ratio_5d": 0.6107,
+      "volume_ratio_5d": 0.6236,
       "price_range_20d": 28.57,
-      "signal_reasons": [
-        "Post-drop setup (>20% decline from 30d high)"
-      ]
+      "signal_reasons": []
     },
     {
       "ticker": "REX.V",
@@ -3032,7 +2927,7 @@
       "latest_value_cad": 82500.0,
       "latest_trade_date": "2026-03-06",
       "volume_ratio_5d": 0.4726,
-      "price_range_20d": 22.64,
+      "price_range_20d": 22.22,
       "signal_reasons": []
     },
     {
